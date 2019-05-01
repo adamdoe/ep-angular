@@ -32,6 +32,7 @@ import { ButtonComponent } from './components/shared/button/button.component';
 import { FooterAwardsComponent } from './components/footer/footer-awards/footer-awards.component';
 import { FooterCopyrightLineComponent } from './components/footer/footer-copyright-line/footer-copyright-line.component';
 import { FooterSocialIconsComponent } from './components/footer/footer-social-icons/footer-social-icons.component';
+import { SectionTitleComponent } from './components/shared/section-title/section-title.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { FooterSocialIconsComponent } from './components/footer/footer-social-ic
     FooterAwardsComponent,
     FooterCopyrightLineComponent,
     FooterSocialIconsComponent,
+    SectionTitleComponent,
   ],
   imports: [
     BrowserModule,
