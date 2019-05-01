@@ -1,0 +1,23 @@
+<section class="container home_capabilities">
+  <div class="section-wrapper">
+    <div class="row">
+      <div class="col-12">
+
+        <h2 class="text-uppercase text-center" data-aos="fade-up" data-aos-duration="1000">
+          Capabilities
+        </h2>
+
+        <div class="clearfix row home_capabilities__boxes">
+
+        <app-capability-item
+        *ngFor="let capability of capabilities"
+        [capability]="capability"
+        class="col-lg-4 col-md-6 col-sm-4"
+        >
+        </app-capability-item>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
