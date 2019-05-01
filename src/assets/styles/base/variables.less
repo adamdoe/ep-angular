@@ -1,0 +1,50 @@
+/************************************************************************
+* Variables
+*
+* Author: Doe
+* Purpose: Website Color Palate
+/************************************************************************/
+
+//OLD
+@darkblue:  #05345F;
+@lightblue: #517290;
+@orange: #F7AA2A;
+
+//NEW COLOR PALATE
+@lightblue: #A7B7CF;
+@orange: #EE964B;
+@concrete: #F7F7F7;
+@charcoal: #393C3E;
+
+@gray: #CFCFCF;
+@white: #FFFFFF;
+@lightGray: #F8F7F7;
+
+
+
+
+/************************************************************************
+* BOOTSTRAP FONT OVERIDES
+/************************************************************************/
+@font-family-sans-serif: 'museo-sans', sans-serif;
+@font-family-serif: 'magpie',"Times New Roman", Times, serif;
+@font-weight-base:  300;
+
+@headings-font-family: @font-family-serif;
+@headings-color: @darkblue;
+
+/************************************************************************
+* FONT HIGHLIGHT COLORS
+/************************************************************************/
+::selection {
+  background: @orange;
+  color: @white; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: @orange;
+  color: @white; /* Gecko Browsers */
+}
+
+.active>.nav-link {
+  color: @darkblue !important;
+}
