@@ -29,6 +29,9 @@ import { ExperienceComponent } from './components/page-home/experience/experienc
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExperienceItemComponent } from './components/page-home/experience/experience-item/experience-item.component';
 import { ButtonComponent } from './components/shared/button/button.component';
+import { FooterAwardsComponent } from './components/footer/footer-awards/footer-awards.component';
+import { FooterCopyrightLineComponent } from './components/footer/footer-copyright-line/footer-copyright-line.component';
+import { FooterSocialIconsComponent } from './components/footer/footer-social-icons/footer-social-icons.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,9 @@ import { ButtonComponent } from './components/shared/button/button.component';
     ExperienceComponent,
     ExperienceItemComponent,
     ButtonComponent,
+    FooterAwardsComponent,
+    FooterCopyrightLineComponent,
+    FooterSocialIconsComponent,
   ],
   imports: [
     BrowserModule,
