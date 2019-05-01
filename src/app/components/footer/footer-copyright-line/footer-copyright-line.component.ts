@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-footer-copyright-line',
@@ -7,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterCopyrightLineComponent implements OnInit {
 
-  copy: string = '&reg; EATON PARTNERS, YEAR. Eaton Partners, is a wholly owned subsidiary and affiliate of <a href="http://www.stifel.com/">Stifel Financial Corp.</a>';
+  copy = this._sanitizer.bypassSecurityTrustHtml('&reg; EATON PARTNERS, YEAR. Eaton Partners, is a wholly owned subsidiary and affiliate of <a href="http://www.stifel.com/">Stifel Financial Corp.</a>');
 
-  constructor() { }
+  constructor(private _sanitizer: DomSanitizer) { }
 
   ngOnInit() {
+    
   }
 
 }
