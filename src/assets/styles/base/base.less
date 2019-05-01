@@ -7,17 +7,22 @@ h2 {
   font-family: "magpie","Times New Roman",Times,serif;
   font-weight: 500;
   line-height: 1.2;
-  color: #05345F;
+  color: @darkblue;
 }
 
 
+h1, h2, h3, h4, h5,h6 { letter-spacing: 2px; }
+
 a,i {
-  color: $darkblue;
+  color: @darkblue;
 
   &:hover {
     text-decoration: none;
-    color: $orange;
+    color: @orange;
   }
 }
 
-h1, h2, h3, h4, h5,h6 { letter-spacing: 2px; }
+i {
+  font-family: "FontAwesome";
+  font-style: nomral;
+}
