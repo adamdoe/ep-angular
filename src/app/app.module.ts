@@ -22,6 +22,7 @@ import { PageOurApproachComponent } from './components/page-our-approach/page-ou
 import { GlobalReachComponent } from './components/page-why-choose-us/global-reach/global-reach.component';
 import { ExperienceComponent } from './components/page-why-choose-us/experience/experience.component';
 import { PageTemplateComponent } from './components/page-template/page-template.component';
+import { PageErrorComponent } from './components/page-error/page-error.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { PageTemplateComponent } from './components/page-template/page-template.
     GlobalReachComponent,
     ExperienceComponent,
     PageTemplateComponent,
+    PageErrorComponent,
   ],
   imports: [
     BrowserModule,

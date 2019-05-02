@@ -13,6 +13,7 @@ import { PreFooterComponent } from './footer/pre-footer/pre-footer.component';
 import { ButtonComponent } from './button/button.component';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PageTitleComponent,
   ],
   imports: [
-    CommonModule,NgbModule
+    CommonModule,
+    NgbModule,
+    AppRoutingModule
   ],
   exports: [
     SectionTitleComponent,

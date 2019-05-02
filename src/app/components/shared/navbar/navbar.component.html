@@ -13,54 +13,28 @@
       <ul class="navbar-nav ml-auto">
         
         <!-- Loop Top Level Nav Items Here -->
-        <li *ngFor="let menuItem of menu; let i of index">
-            <a class="nav-link text-uppercase dropdown-toggle" id="ARIA" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{menuItem.text}}</a>
+        <li *ngFor="let menuItem of menu; index as i" ngbDropdown>
+            <a 
+            class="nav-link text-uppercase dropdown-toggle" 
+            id="{{ 'id__' + menuItem.id }}" 
+            role="button" ngbDropdownToggle>
+            {{menuItem.text}}
+          </a>
             
             <!-- Loop Children Here -->
-            <div class="dropdown-menu" aria-labelledby="ARIA" *ngIf="menuItem.children > 0">
-                <a *ngFor="let childItem of menuItem.children" class="dropdown-item" href="/about/who-we-are">{{menuItem.children[0].text}}</a>
+            <div class="dropdown-menu"  
+            *ngIf="menuItem.children.length > 0" ngbDropdownMenu
+            >
+                <a 
+                  *ngFor="let childItem of menuItem.children; index as i " 
+                  class="dropdown-item" href="{{menuItem.children[i].link}}">
+                  {{menuItem.children[i].text}}
+                </a>
               </div>
               <!-- /Loop Children Here -->
         </li>
         <!-- /Loop Top Level Nav Items Here -->
 
-        <li class="nav-item dropdown" ngbDropdown id="ABOUT US">
-          <a class="nav-link text-uppercase dropdown-toggle" href="#!" id="ABOUT US" ngbDropdownToggle>
-            ABOUT US                    </a>
-          <div class="dropdown-menu" aria-labelledby="ABOUT US" ngbDropdownMenu>
-            <a class="dropdown-item" href="/about/who-we-are">Who We Are</a>
-            <a class="dropdown-item" href="/about/why-choose-us">Why Choose Us</a>
-            <a class="dropdown-item" href="/about/our-approach">Our Approach</a>
-            <a class="dropdown-item" href="/about/office-locations">Office Locations</a>
-            <a class="dropdown-item" href="/about/our-team">Our Team</a>
-          </div>
-        </li>
-
-
-        <li class="nav-item dropdown ">
-          <a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown" href="#!" id="capabilities" role="button" aria-haspopup="true" aria-expanded="false">
-            CAPABILITIES                    </a>
-
-          <div class="dropdown-menu" aria-labelledby="capabilities">
-            <a class="dropdown-item" href="/capabilities/private-credit">Private Credit</a>
-            <a class="dropdown-item" href="/capabilities/private-equity">Private Equity</a>
-            <a class="dropdown-item" href="/capabilities/real-assets">Real Assets</a>
-            <a class="dropdown-item" href="/capabilities/real-estate">Real Estate</a>
-            <a class="dropdown-item" href="/capabilities/hedge-funds">Hedge Funds</a>
-            <a class="dropdown-item" href="/capabilities/secondary-advisory-directs">General Partner Advisory &amp; Directs</a>
-            <a class="dropdown-item" href="/capabilities/emerging-managers">Emerging Managers</a>
-          </div>
-
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase dropdown-toggle" href="insights" id="INSIGHTS" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            INSIGHTS                    </a>
-          <div class="dropdown-menu" aria-labelledby="capabilities">
-            <a class="dropdown-item" href="/insights/news">News &amp; Insights</a>
-            <a class="dropdown-item" href="/insights/videos">Videos</a>
-          </div>
-        </li>
 
 
         <li class="nav-item dropdown">
