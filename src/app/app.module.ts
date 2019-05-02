@@ -16,6 +16,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageHomeModule } from './components/page-home/page-home.module';
 import { SharedModule } from './components/shared/shared.module';
+import { PageWhoWeAreComponent } from './components/page-who-we-are/page-who-we-are.component';
+import { PageWhyChooseUsComponent } from './components/page-why-choose-us/page-why-choose-us.component';
+import { PageOurApproachComponent } from './components/page-our-approach/page-our-approach.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { SharedModule } from './components/shared/shared.module';
     NewsItemComponent,
     PageVideosComponent,
     PageContactUsComponent,
+    PageWhoWeAreComponent,
+    PageWhyChooseUsComponent,
+    PageOurApproachComponent,
   ],
   imports: [
     BrowserModule,
