@@ -5,9 +5,9 @@
       <img src="{{ navbar.logo }}" style="height: 50px;">
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
@@ -15,15 +15,19 @@
         <!-- Loop Top Level Nav Items Here -->
         <li *ngFor="let menuItem of menu; index as i" ngbDropdown>
             <a 
-            class="nav-link text-uppercase dropdown-toggle" 
+            class="nav-link text-uppercase" 
             id="{{ 'id__' + menuItem.id }}" 
-            role="button" ngbDropdownToggle>
+            role="button" 
+            ngbDropdownToggle
+            >
             {{menuItem.text}}
           </a>
             
             <!-- Loop Children Here -->
-            <div class="dropdown-menu"  
-            *ngIf="menuItem.children.length > 0" ngbDropdownMenu
+            <div 
+              class="dropdown-menu"  
+              *ngIf="menuItem.children.length > 0" 
+              ngbDropdownMenu
             >
                 <a 
                   *ngFor="let childItem of menuItem.children; index as i " 
@@ -37,11 +41,11 @@
 
 
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link text-uppercase" routerLink="/contact-us" id="CONTACT US" role="button">CONTACT US
             <i class="far fa-paper-plane" style="padding-left: 10px;"></i>
           </a>
-        </li>
+        </li> -->
         
       </ul>
     </div>

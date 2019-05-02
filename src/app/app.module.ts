@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,6 @@ import { NewsItemsWrapperComponent } from './components/page-news/news-items-wra
 import { NewsItemComponent } from './components/page-news/news-item/news-item.component';
 import { PageVideosComponent } from './components/page-videos/page-videos.component';
 import { PageContactUsComponent } from './components/page-contact-us/page-contact-us.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageHomeModule } from './components/page-home/page-home.module';

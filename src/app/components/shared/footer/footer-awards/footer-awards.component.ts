@@ -9,16 +9,32 @@ export class FooterAwardsComponent implements OnInit {
 
   awards = [ 
     {
-      imagePath: 'https://eaton-partners.com/wp-content/themes/eaton_new/assets/img/awards/PlacementAgentAsia2018.png'
+      id: 1,
+      imagePath: '/assets/img/awards/PlacementAgentAsia2018.png'
     },
     {
-      imagePath: 'https://eaton-partners.com/wp-content/themes/eaton_new/assets/img/awards/PlacementAgentAsia2018.png'
+      id: 2,
+      imagePath: '/assets/img/awards/SecondariesAsia2018.png'
     },
     {
-      imagePath: 'https://eaton-partners.com/wp-content/themes/eaton_new/assets/img/awards/PlacementAgentAsia2018.png'
+      id: 3,
+      imagePath: '/assets/img/awards/PlacementAgentAsia2017.png'
     },
     {
-      imagePath: 'https://eaton-partners.com/wp-content/themes/eaton_new/assets/img/awards/PlacementAgentAsia2018.png'
+      id: 4,
+      imagePath: '/assets/img/awards/PlacementAgentNA2017.svg'
+    },
+    {
+      id: 5,
+      imagePath: '/assets/img/awards/PlacementAgentAsia2016.png'
+    },
+    {
+      id: 6,
+      imagePath: '/assets/img/awards/SecondariesAsia2016.png'
+    },
+    {
+      id: 5,
+      imagePath: '/assets/img/awards/PlacementAgentAsia2015.png'
     }
   ];
   constructor() { }
