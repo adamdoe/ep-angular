@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
