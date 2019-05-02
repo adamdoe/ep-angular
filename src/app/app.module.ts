@@ -19,6 +19,9 @@ import { SharedModule } from './components/shared/shared.module';
 import { PageWhoWeAreComponent } from './components/page-who-we-are/page-who-we-are.component';
 import { PageWhyChooseUsComponent } from './components/page-why-choose-us/page-why-choose-us.component';
 import { PageOurApproachComponent } from './components/page-our-approach/page-our-approach.component';
+import { GlobalReachComponent } from './components/page-why-choose-us/global-reach/global-reach.component';
+import { ExperienceComponent } from './components/page-why-choose-us/experience/experience.component';
+import { PageTemplateComponent } from './components/page-template/page-template.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { PageOurApproachComponent } from './components/page-our-approach/page-ou
     PageWhoWeAreComponent,
     PageWhyChooseUsComponent,
     PageOurApproachComponent,
+    GlobalReachComponent,
+    ExperienceComponent,
+    PageTemplateComponent,
   ],
   imports: [
     BrowserModule,

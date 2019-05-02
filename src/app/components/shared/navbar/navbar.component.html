@@ -11,11 +11,24 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
+        
+        <!-- Loop Top Level Nav Items Here -->
+        <li *ngFor="let menuItem of menu; let i of index">
+            <a class="nav-link text-uppercase dropdown-toggle" id="ARIA" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{menuItem.text}}</a>
+            
+            <!-- Loop Children Here -->
+            <div class="dropdown-menu" aria-labelledby="ARIA" *ngIf="menuItem.children > 0">
+                <a *ngFor="let childItem of menuItem.children" class="dropdown-item" href="/about/who-we-are">{{menuItem.children[0].text}}</a>
+              </div>
+              <!-- /Loop Children Here -->
+        </li>
+        <!-- /Loop Top Level Nav Items Here -->
 
-        <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase dropdown-toggle" href="about-us" id="ABOUT US" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item dropdown" ngbDropdown id="ABOUT US">
+          <a class="nav-link text-uppercase dropdown-toggle" href="#!" id="ABOUT US" ngbDropdownToggle>
             ABOUT US                    </a>
-          <div class="dropdown-menu" aria-labelledby="ABOUT US">
+          <div class="dropdown-menu" aria-labelledby="ABOUT US" ngbDropdownMenu>
             <a class="dropdown-item" href="/about/who-we-are">Who We Are</a>
             <a class="dropdown-item" href="/about/why-choose-us">Why Choose Us</a>
             <a class="dropdown-item" href="/about/our-approach">Our Approach</a>

@@ -12,6 +12,7 @@ import { FooterSocialIconsComponent } from './footer/footer-social-icons/footer-
 import { PreFooterComponent } from './footer/pre-footer/pre-footer.component';
 import { ButtonComponent } from './button/button.component';
 import { PageTitleComponent } from './page-title/page-title.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,10 +28,10 @@ import { PageTitleComponent } from './page-title/page-title.component';
     FooterSocialIconsComponent,
     PreFooterComponent,
     PageTitleComponent,
-    PageTitleComponent
+    PageTitleComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,NgbModule
   ],
   exports: [
     SectionTitleComponent,
@@ -44,7 +45,7 @@ import { PageTitleComponent } from './page-title/page-title.component';
     FooterCopyrightLineComponent,
     FooterSocialIconsComponent,
     PreFooterComponent,
-    PageTitleComponent
+    PageTitleComponent,
   ]
 })
 export class SharedModule { }
