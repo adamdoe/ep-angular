@@ -11,6 +11,7 @@ import { FooterCopyrightLineComponent } from './footer/footer-copyright-line/foo
 import { FooterSocialIconsComponent } from './footer/footer-social-icons/footer-social-icons.component';
 import { PreFooterComponent } from './footer/pre-footer/pre-footer.component';
 import { ButtonComponent } from './button/button.component';
+import { PageTitleComponent } from './page-title/page-title.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { ButtonComponent } from './button/button.component';
     FooterAwardsComponent,
     FooterCopyrightLineComponent,
     FooterSocialIconsComponent,
-    PreFooterComponent
+    PreFooterComponent,
+    PageTitleComponent,
+    PageTitleComponent
   ],
   imports: [
     CommonModule
@@ -40,7 +43,8 @@ import { ButtonComponent } from './button/button.component';
     FooterAwardsComponent,
     FooterCopyrightLineComponent,
     FooterSocialIconsComponent,
-    PreFooterComponent
+    PreFooterComponent,
+    PageTitleComponent
   ]
 })
 export class SharedModule { }

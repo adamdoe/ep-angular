@@ -7,7 +7,7 @@ import { PageWhyChooseUsComponent } from './components/page-why-choose-us/page-w
 import { PageOurApproachComponent } from './components/page-our-approach/page-our-approach.component';
 
 const routes: Routes = [
-  { path: '', component: PageHomeComponent },
+  { path: '', component: PageHomeComponent, pathMatch: 'full' },
   { path: 'contact', component: PageContactUsComponent },
   { path: 'about/who-we-are', component: PageWhoWeAreComponent },
   { path: 'about/why-choose-us', component: PageWhyChooseUsComponent },
