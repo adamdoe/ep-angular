@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,8 +9,6 @@ import { SharedComponent } from './components/shared/shared.component';
 import { SplitSectionComponent } from './components/capabilities/split-section/split-section.component';
 import { TeamSectionComponent } from './components/capabilities/team-section/team-section.component';
 import { TombstoneSectionComponent } from './components/capabilities/tombstone-section/tombstone-section.component';
-import { NewsItemsWrapperComponent } from './components/page-news/news-items-wrapper/news-items-wrapper.component';
-import { NewsItemComponent } from './components/page-news/news-item/news-item.component';
 import { PageVideosComponent } from './components/page-videos/page-videos.component';
 import { PageContactUsComponent } from './components/page-contact-us/page-contact-us.component';
 
@@ -26,6 +25,8 @@ import { PageErrorComponent } from './components/page-error/page-error.component
 import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/page-privacy-policy.component';
 import { PageTermsComponent } from './components/page-terms/page-terms.component';
 import { VideoItemComponent } from './components/page-videos/video-item/video-item.component';
+import { PageNewsComponent } from './components/page-news/page-news.component';
+import { NewsItemComponent } from './components/page-news/news-item/news-item.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,6 @@ import { VideoItemComponent } from './components/page-videos/video-item/video-it
     SplitSectionComponent,
     TeamSectionComponent,
     TombstoneSectionComponent,
-    NewsItemsWrapperComponent,
-    NewsItemComponent,
     PageVideosComponent,
     PageContactUsComponent,
     PageWhoWeAreComponent,
@@ -48,12 +47,15 @@ import { VideoItemComponent } from './components/page-videos/video-item/video-it
     PagePrivacyPolicyComponent,
     PageTermsComponent,
     VideoItemComponent,
+    PageNewsComponent,
+    NewsItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     PageHomeModule,
     SharedModule
   ],
