@@ -7,8 +7,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./footer-copyright-line.component.less']
 })
 export class FooterCopyrightLineComponent implements OnInit {
-
-  copy = this._sanitizer.bypassSecurityTrustHtml('&reg; EATON PARTNERS, YEAR. Eaton Partners, is a wholly owned subsidiary and affiliate of <a href="http://www.stifel.com/" target="_blank">Stifel Financial Corp.</a>');
+  year = new Date().getFullYear();
+  copy = this._sanitizer.bypassSecurityTrustHtml('&reg; EATON PARTNERS, '+this.year+'. Eaton Partners, is a wholly owned subsidiary and affiliate of <a href="http://www.stifel.com/" target="_blank">Stifel Financial Corp.</a>');
 
   constructor(private _sanitizer: DomSanitizer) { }
 
