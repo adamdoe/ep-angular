@@ -25,6 +25,7 @@ import { PageTemplateComponent } from './components/page-template/page-template.
 import { PageErrorComponent } from './components/page-error/page-error.component';
 import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/page-privacy-policy.component';
 import { PageTermsComponent } from './components/page-terms/page-terms.component';
+import { VideoItemComponent } from './components/page-videos/video-item/video-item.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PageTermsComponent } from './components/page-terms/page-terms.component
     PageErrorComponent,
     PagePrivacyPolicyComponent,
     PageTermsComponent,
+    VideoItemComponent,
   ],
   imports: [
     BrowserModule,

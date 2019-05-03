@@ -8,6 +8,7 @@ import { PageOurApproachComponent } from './components/page-our-approach/page-ou
 import { PageErrorComponent } from './components/page-error/page-error.component';
 import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/page-privacy-policy.component';
 import { PageTermsComponent } from './components/page-terms/page-terms.component';
+import { PageVideosComponent } from './components/page-videos/page-videos.component';
 
 const routes: Routes = [
   { path: '', component: PageHomeComponent, pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'about/who-we-are', component: PageWhoWeAreComponent },
   { path: 'about/why-choose-us', component: PageWhyChooseUsComponent },
   { path: 'about/our-approach', component: PageOurApproachComponent },
+  { path: 'insights/videos', component: PageVideosComponent },  
   { path: 'privacy-policy', component: PagePrivacyPolicyComponent },
   { path: 'terms-and-conditions', component: PageTermsComponent },
   { path: '**', component: PageErrorComponent },
