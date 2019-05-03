@@ -4,17 +4,14 @@
       <div class="col-12">
           <app-section-title>Experience</app-section-title>
         </div>
-
-      <div class="equalHeight clearfix">
-
-        <!-- Loop starts here-->
-        <!-- <app-experience-item
-          *ngFor="let experienceCard of experienceCards"
-        [experienceCard]="experienceCard">
-        </app-experience-item> -->
-        <!-- loop ends here -->
-
-      </div>
+        <div class="row">
+          <app-experience-item
+            *ngFor="let experienceCard of experienceCards"
+            [experienceCard]="experienceCard"
+            class="col-12 col-md-4"
+            >
+          </app-experience-item>
+        </div>
     </div>
   </div>
 </section>

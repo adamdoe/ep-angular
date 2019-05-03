@@ -8,10 +8,16 @@
               <div class="col-3" *ngFor="let menuItem of menu; index as i">
                 <div class="menu-pre-footer-1-container">
                   <ul id="menu-pre-footer-1" class="pre-footer-1">
-                    
+
+                    <!-- Parent Menu Name -->
+                    <li>
+                      <a href="#!">{{menuItem.text}}</a>
+                    </li>
+                    <!-- /Parent Menu Name -->
+
                     <!-- Children Loop -->
                     <li *ngFor="let children of menuItem.children">
-                      <a href="#!">{{children.text}}</a>
+                      <a href="{{children.link}}">{{children.text}}</a>
                     </li>
                     <!-- /Children Loop -->
 
