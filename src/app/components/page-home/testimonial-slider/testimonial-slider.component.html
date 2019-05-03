@@ -1,22 +1,17 @@
-<section class="ep__testimonials">
+<section class="ep__testimonials section-wrapper">
+  <app-section-title>Testimonials</app-section-title>
+
   <ngb-carousel>
-    <ng-template ngbSlide>
-      <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="carousel-caption">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </ng-template>
+    <div 
+    *ngFor="let testimonial of testimonials">
+      <ng-template ngbSlide>
+        <div class="col-12 col-md-6 md-offset-3 text-center">
+          <p>{{ testimonial.quote }}</p>
+          <p>&#8212; {{testimonial.name}}, {{testimonial.title}}</p>
+          <p>{{testimonial.company}}</p>
+        </div>
+      </ng-template>
+    </div>
   </ngb-carousel>
+  
 </section>

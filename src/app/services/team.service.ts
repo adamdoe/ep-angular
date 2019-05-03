@@ -25,7 +25,7 @@ export class TeamService {
       title: 'Chief Technology Officer',
     },
     
-  ]
+  ];
 
   constructor() { }
 

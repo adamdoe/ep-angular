@@ -23,6 +23,8 @@ import { GlobalReachComponent } from './components/page-why-choose-us/global-rea
 import { ExperienceComponent } from './components/page-why-choose-us/experience/experience.component';
 import { PageTemplateComponent } from './components/page-template/page-template.component';
 import { PageErrorComponent } from './components/page-error/page-error.component';
+import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/page-privacy-policy.component';
+import { PageTermsComponent } from './components/page-terms/page-terms.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { PageErrorComponent } from './components/page-error/page-error.component
     ExperienceComponent,
     PageTemplateComponent,
     PageErrorComponent,
+    PagePrivacyPolicyComponent,
+    PageTermsComponent,
   ],
   imports: [
     BrowserModule,

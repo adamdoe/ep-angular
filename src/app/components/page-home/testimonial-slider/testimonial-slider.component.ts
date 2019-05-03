@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestimonialService } from 'src/app/services/testimonial.service';
 
 @Component({
   selector: 'app-testimonial-slider',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialSliderComponent implements OnInit {
 
+  testimonials;
 
-  constructor() { }
+  constructor( private testimonialService: TestimonialService) { }
 
   ngOnInit() {
+
+    this.testimonials = this.testimonialService.getTestimonials();
+    console.log('Testimonials', this.testimonials);
   }
 
 }
