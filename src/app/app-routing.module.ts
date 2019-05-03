@@ -12,16 +12,63 @@ import { PageVideosComponent } from './components/page-videos/page-videos.compon
 import { PageNewsComponent } from './components/page-news/page-news.component';
 
 const routes: Routes = [
-  { path: '', component: PageHomeComponent, pathMatch: 'full' },
-  { path: 'contact', component: PageContactUsComponent },
-  { path: 'about/who-we-are', component: PageWhoWeAreComponent },
-  { path: 'about/why-choose-us', component: PageWhyChooseUsComponent },
-  { path: 'about/our-approach', component: PageOurApproachComponent },
-  { path: 'insights/news', component: PageNewsComponent },  
-  { path: 'insights/videos', component: PageVideosComponent },  
-  { path: 'privacy-policy', component: PagePrivacyPolicyComponent },
-  { path: 'terms-and-conditions', component: PageTermsComponent },
-  { path: '**', component: PageErrorComponent },
+  { 
+    path: '', 
+    component: PageHomeComponent, 
+    pathMatch: 'full', 
+    data: { title: 'Home | Eaton Partners'} 
+  },
+  { 
+    path: 'contact', 
+    component: PageContactUsComponent, 
+    data: { title: 'Contact Us | Eaton Partners'} 
+  },
+  { 
+    path: 'about/who-we-are', 
+    component: PageWhoWeAreComponent,
+    data: { title: 'Who We Are | Eaton Partners'} 
+ 
+  },
+  { 
+    path: 'about/why-choose-us', 
+    component: PageWhyChooseUsComponent,
+    data: { title: 'Why Choose Us | Eaton Partners'} 
+ 
+  },
+  { 
+    path: 'about/our-approach', 
+    component: PageOurApproachComponent,
+    data: { title: 'Our Approach | Eaton Partners'} 
+  },
+  { 
+    path: 'insights/news', 
+    component: PageNewsComponent,
+    data: { title: 'News & Insights | Eaton Partners'} 
+
+  },  
+  { 
+    path: 'insights/videos', 
+    component: PageVideosComponent,
+    data: { title: 'Videos | Eaton Partners'} 
+ 
+  },  
+  { 
+    path: 'privacy-policy', 
+    component: PagePrivacyPolicyComponent,
+    data: { title: 'Privacy Policy | Eaton Partners'} 
+ 
+  },
+  { 
+    path: 'terms-and-conditions', 
+    component: PageTermsComponent,
+    data: { title: 'Terms & Conditions | Eaton Partners'} 
+ 
+  },
+  { 
+    path: '**', 
+    component: PageErrorComponent, 
+    data: { title: '404 | Eaton Partners'} 
+  },
 ];
 
 @NgModule({

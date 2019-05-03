@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoService } from 'src/app/services/video.service';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-videos',
@@ -8,11 +10,15 @@ import { VideoService } from 'src/app/services/video.service';
 })
 export class PageVideosComponent implements OnInit {
   videos;
-  constructor( private videoService: VideoService ) { }
+  constructor( 
+    private videoService: VideoService,
+    private titleService: Title,
+    private activatedRoute: ActivatedRoute 
+    ) { }
 
   ngOnInit() {
     this.videos = this.videoService.videos;
-    console.log('Videos', this.videos);
+    this.titleService.setTitle(this.activatedRoute.snapshot.data.title);
   }
 
 }
