@@ -118,10 +118,84 @@ export class MenuService {
       "footer": 
         [
           {
-            id: 3,
-            parentId:1,
-            text: 'Who We Are',
-            link: '33B',
+            id: 1,
+            text: "About Us",
+            link: '#!',
+            children: [
+              {
+                id: 1,
+                parentId: 1,
+                text: 'Who We Are',
+                link: 'about/who-we-are',
+              },
+              {
+                id: 2,
+                parentId: 1,
+                text: 'Why Choose Us',
+                link: 'about/why-choose-us',
+              },
+              {
+                id: 3,
+                parentId: 1,
+                text: 'Our Approach',
+                link: 'about/our-approach',
+              }
+            ]
+          },
+          {
+            id: 2,
+            text: "Capabilities",
+            link: '#!',
+            children: [
+              {
+                id: 1,
+                parentId: 2,
+                text: 'Private Equity',
+                link: '/capabilities/private-equity'
+              },
+              {
+                id: 2,
+                parentId: 2,
+                text: 'Private Credit',
+                link: '/capabilities/private-credit'
+              },
+              {
+                id: 3,
+                parentId: 2,
+                text: 'Real Estate',
+                link: '/capabilities/real-estate'
+              },
+              {
+                id: 4,
+                parentId: 2,
+                text: 'Real Assets',
+                link: '/capabilities/real-assets'
+              },
+              {
+                id: 5,
+                parentId: 2,
+                text: 'Private Credit',
+                link: '/capabilities/private-credit'
+              },
+              {
+                id: 6,
+                parentId: 2,
+                text: 'Hedge Funds',
+                link: '/capabilities/hedge-funds'
+              },
+              {
+                id: 7,
+                parentId: 2,
+                text: 'General Partner Advisory & Directs',
+                link: '/capabilities/secondary-advisory-directs'
+              },
+              {
+                id: 8,
+                parentId: 2,
+                text: 'Emerging Managers',
+                link: '/capabilities/emerging-managers'
+              },
+            ]
           },
         ]
     };

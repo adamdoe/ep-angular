@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-footer-menu',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterMenuComponent implements OnInit {
 
-  constructor() { }
+
+  menu;
+  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
+    this.menu = this.menuService.getMenus().footer;
+    console.log('EP Footer Menu', this.menu);
   }
+
+
 
 }

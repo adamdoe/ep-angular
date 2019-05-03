@@ -19,6 +19,5 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.menu = this.menuService.getMenus().main;
-    console.log(this.menu);
   }
 }

@@ -3,52 +3,24 @@
         <div class="col-12">	
           <div class="container">	
             <nav class="row" role="navigation" label="footer-menu">	
-              <div class="col-3">
+              
+              <!-- Parent Loop -->
+              <div class="col-3" *ngFor="let menuItem of menu; index as i">
                 <div class="menu-pre-footer-1-container">
                   <ul id="menu-pre-footer-1" class="pre-footer-1">
-                    <li id="menu-item-2663" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2663">
-                      <a href="#!">About Us</a>
+                    
+                    <!-- Children Loop -->
+                    <li *ngFor="let children of menuItem.children">
+                      <a href="#!">{{children.text}}</a>
                     </li>
-                    <li><a href="https://eaton-partners.com/about/who-we-are/">Who We Are</a></li>
-                    <li><a href="https://eaton-partners.com/about/why-choose-us/">Why Choose Us</a></li>
-                    <li><a href="https://eaton-partners.com/about/our-approach/">Our Approach</a></li>
-                    <li><a href="https://eaton-partners.com/about/our-team/">Our Team</a></li>
-                    <li><a href="https://eaton-partners.com/about/our-team/">Office Locations</a></li>
-                    </ul>
-                </div>					
-              </div>
-              <div class="col-3">	
-                <div>
-                  <ul>
-                    <li><a href="#!">Capabilities</a></li>
-                    <li><a href="https://eaton-partners.com/capabilities/private-equity/">Private Equity</a></li>
-                    <li><a href="https://eaton-partners.com/capabilities/private-credit/">Private Credit</a></li>
-                    <li><a href="https://eaton-partners.com/capabilities/real-assets/">Real Assets</a></li>
-                    <li><a href="https://eaton-partners.com/capabilities/real-estate/">Real Estate</a></li>
-                    <li><a href="https://eaton-partners.com/capabilities/hedge-funds/">Hedge Funds</a></li>
-                    <li><a href="https://eaton-partners.com/capabilities/secondary-advisory-directs/">General Partner Advisory &amp; Directs</a></li>
-                    <li><a href="https://eaton-partners.com/capabilities/emerging-managers/">Emerging Managers</a></li>
-                    </ul>
-                  </div>					
-              </div>
-              <div class="col-3">	
-                <div class="menu-pre-footer-3-container">
-                  <ul id="menu-pre-footer-3" class="pre-footer-3">
-                    <li><a href="#!">Insights</a></li>
-                    <li><a href="https://eaton-partners.com/insights/news/">News &amp; Insights</a></li>
-                      <li><a href="https://eaton-partners.com/insights/videos/">Videos</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">	
-                <div class="menu-pre-footer-4-container">
-                  <ul id="menu-pre-footer-4" class="pre-footer-4">
-                    <li id="menu-item-2667"><a href="#!">Legal</a></li>
-                    <li><a href="https://eaton-partners.com/terms-and-conditions/">Disclosure, Terms and Conditions</a></li>
-                    <li><a href="https://eaton-partners.com/privacy-policy/">Privacy Policy</a></li>
+                    <!-- /Children Loop -->
+
                   </ul>
                 </div>					
               </div>
+              <!-- /Parent Loop -->
+
+
             </nav>
           </div>
         </div>
