@@ -6,8 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./button.component.less']
 })
 export class ButtonComponent implements OnInit {
-
-  @Input() text;
+  
+  @Input('type') type: string;
+  @Input('text') text: string;
   constructor() { }
 
   ngOnInit() {

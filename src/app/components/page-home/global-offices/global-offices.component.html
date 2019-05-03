@@ -9,9 +9,12 @@
             </div>
 
             <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000">
-                <p>{{ globalOfficeData.paragraph }}</p>
+                <p [ngStyle]="{'margin-bottom': '35px'}">{{ globalOfficeData.paragraph }}</p>
                 <div class="text-center">
-                    <app-button></app-button>
+                    <app-button 
+                    [text]="'View Offices'"
+                    [type]="'blue'"
+                    ></app-button>
                 </div>
             </div>
         </div>

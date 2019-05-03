@@ -1,2 +1,7 @@
-<a href="" class="btn__custom-btn">{{ text }}</a>
+<a 
+[ngClass]="{'btn__custom-btn--white':type === 'white', 
+            'btn__custom-btn':type === 'blue'
+        }">
+{{text}}
+</a>
 

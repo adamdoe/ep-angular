@@ -1,6 +1,4 @@
-.btn__custom-btn {
-  cursor: pointer;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #05345F), color-stop(50%, rgba(0,0,0,0)));
+a.btn__custom-btn {
   background: linear-gradient(to right, #05345F 50%, rgba(0,0,0,0) 50%);
   background-position: right bottom;
   background-size: 200% 100%;
@@ -9,8 +7,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
-  font-family: "museo-sans",sans-serif;
-  color: #05345F;
   font-weight: 300;
   min-width: 150px;
   padding: 15px 20px;
@@ -20,5 +16,44 @@
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-appearance: none !important;
+
+  &:hover {
+    background-color: #05345F;
+    background-position: left bottom;
+    color: white;
+
+  }
+
+  &--white {
+    background: linear-gradient(to right, #fff 50%, rgba(0,0,0,0) 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    border: 2px solid #fff;
+    border-radius: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    color: #fff ;
+    font-weight: 300;
+    min-width: 150px;
+    padding: 15px 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-appearance: none;
+
+
+    &:hover {
+      background-color: white;
+      background-position: left bottom;
+      color: #05345F;
+
+    }
+  }
+
+
+
 }
