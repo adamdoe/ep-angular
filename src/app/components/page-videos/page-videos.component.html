@@ -1,10 +1,14 @@
+<app-navbar></app-navbar>
 <app-page-title>Videos</app-page-title>
-<app-page-template>
-
-        <app-video-item
-            *ngFor="let video of videos"
-            [video]="video"
-            class="col-12 col-md-6 col-lg-4"
-        ></app-video-item>
-
-</app-page-template>
+    <div class="mainContainer">
+        <div class="container">
+            <div class="row">
+                <app-video-item
+                    *ngFor="let video of videos"
+                    [video]="video"
+                    class="col-12 col-md-6 col-lg-4"
+                ></app-video-item>
+            </div>
+        </div>
+    </div>
+<app-footer></app-footer>

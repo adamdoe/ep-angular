@@ -8,52 +8,64 @@ export class VideoService {
     {
       id: 1,
       title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
+      wistia: [
+        {
+          link: 'https://fast.wistia.com/embed/medias/p5p8zjh5vo.jsonp',
+          id: 'p5p8zjh5vo'
+        }
+      ],
     },
     {
       id: 1,
       title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
+      wistia: [
+        {
+          link: 'https://fast.wistia.com/embed/medias/p5p8zjh5vo.jsonp',
+          id: 'p5p8zjh5vo'
+        }
+      ],
     },
     {
       id: 1,
       title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
+      wistia: [
+        {
+          link: 'https://fast.wistia.com/embed/medias/p5p8zjh5vo.jsonp',
+          id: 'p5p8zjh5vo'
+        }
+      ],
     },
     {
       id: 1,
       title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
+      wistia: [
+        {
+          link: 'https://fast.wistia.com/embed/medias/p5p8zjh5vo.jsonp',
+          id: 'p5p8zjh5vo'
+        }
+      ],
     },
     {
       id: 1,
       title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
-    },    {
-      id: 1,
-      title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
-    }
-    ,    {
-      id: 1,
-      title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
+      wistia: [
+        {
+          link: 'https://fast.wistia.com/embed/medias/p5p8zjh5vo.jsonp',
+          id: 'p5p8zjh5vo'
+        }
+      ],
     },
     {
       id: 1,
       title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
+      wistia: [
+        {
+          link: 'https://fast.wistia.com/embed/medias/p5p8zjh5vo.jsonp',
+          id: 'p5p8zjh5vo'
+        }
+      ],
     },
-    {
-      id: 1,
-      title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
-    },
-    {
-      id: 1,
-      title: 'Finding an Anchor Investor',
-      wistiaId: 'p5p8zjh5vo'
-    }
+
   ];
 
   constructor() { }  
