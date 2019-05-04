@@ -49,7 +49,6 @@ import { PageContactUsModule } from './components/page-contact-us/page-contact-u
     
   ],
   imports: [
-    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     NgbModule,
@@ -58,7 +57,8 @@ import { PageContactUsModule } from './components/page-contact-us/page-contact-u
     PageHomeModule,
     PageErrorModule,
     PageContactUsModule,
-    PageNewsModule
+    PageNewsModule,
+    AppRoutingModule,
   ],
   providers: [
     Title

@@ -14,7 +14,7 @@ import { ButtonComponent } from './button/button.component';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { FooterMenuComponent } from './footer-menu/footer-menu.component';
+import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component';
 
 @NgModule({
   declarations: [

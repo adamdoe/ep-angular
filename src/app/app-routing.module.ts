@@ -19,11 +19,6 @@ const routes: Routes = [
     data: { title: 'Home | Eaton Partners'} 
   },
   { 
-    path: 'contact', 
-    component: PageContactUsComponent, 
-    data: { title: 'Contact Us | Eaton Partners'} 
-  },
-  { 
     path: 'about/who-we-are', 
     component: PageWhoWeAreComponent,
     data: { title: 'Who We Are | Eaton Partners'} 
@@ -61,7 +56,7 @@ const routes: Routes = [
   { 
     path: 'terms-and-conditions', 
     component: PageTermsComponent,
-    data: { title: 'Terms & Conditions | Eaton Partners'} 
+    data: { title: 'Terms & | Eaton Partners'} 
  
   },
   { 
