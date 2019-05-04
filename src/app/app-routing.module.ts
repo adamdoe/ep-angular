@@ -19,21 +19,33 @@ const routes: Routes = [
     data: { title: 'Home | Eaton Partners'} 
   },
   { 
-    path: 'about/who-we-are', 
-    component: PageWhoWeAreComponent,
-    data: { title: 'Who We Are | Eaton Partners'} 
- 
+    path: 'contact', 
+    component: PageContactUsComponent, 
+    data: { title: 'Contact Us | Eaton Partners'} 
   },
   { 
-    path: 'about/why-choose-us', 
-    component: PageWhyChooseUsComponent,
-    data: { title: 'Why Choose Us | Eaton Partners'} 
+    path: 'about', 
+    data: { title: 'Who We Are | Eaton Partners'},
+    children: [
+      { 
+        path: 'who-we-are', 
+        component: PageWhoWeAreComponent,
+        data: { title: 'Who We Are | Eaton Partners'} 
+     
+      },
+      { 
+        path: 'why-choose-us', 
+        component: PageWhyChooseUsComponent,
+        data: { title: 'Why Choose Us | Eaton Partners'} 
+     
+      },
+      { 
+        path: 'our-approach', 
+        component: PageOurApproachComponent,
+        data: { title: 'Our Approach | Eaton Partners'} 
+      },
+    ]
  
-  },
-  { 
-    path: 'about/our-approach', 
-    component: PageOurApproachComponent,
-    data: { title: 'Our Approach | Eaton Partners'} 
   },
   { 
     path: 'insights/news', 
