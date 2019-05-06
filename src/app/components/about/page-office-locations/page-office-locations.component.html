@@ -1,0 +1,118 @@
+<app-navbar></app-navbar>
+<article class="mainContainer">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-uppercase text-center">Offices</h1>
+                </div>
+            </div>
+        </div>
+    </div>		<!-- start: North America -->
+    <div id="officeLocations" class="officeLocations" style="padding-bottom: 0px">
+
+
+        <div class="container colsTopBorder clearfix">
+
+            <div class="row clearfix">
+                <div class="col col-12" rel="North America"><div class="container"><div class="row ">	<h2 class="col-lg-3">North America</h2><div class="col-12 col-md-3  locations"><h3>Rowayton</h3><p>131 Rowayton Avenue<br>Rowayton, CT 06853<br><a href="tel:1-203-831-2970">+1 (203) 831 2970</a><br>Local time: <span class="officeCurrTime" data-lat="41.066438" data-lng="-73.444261">5:13 pm</span></p>
+                            </div><div class="col-12 col-md-3  locations"><h3>New York</h3><p>787 Seventh Avenue,<br>12th Floor<br>New York, NY 10019<br><a href="tel: 1-917-398-0940">+1 (917) 398 0940</a><br>Local time: <span class="officeCurrTime" data-lat="40.7614365" data-lng="-73.9836306">5:13 pm</span></p>
+                            </div><div class="col-12 col-md-3  locations"><h3>Chicago</h3><p>70 West Madison Street<br>24th Floor<br>Chicago, IL 60602<br><a href="tel: 1-312-340-0609">+1 (312) 340 0609</a><br>Local time: <span class="officeCurrTime" data-lat="41.8822512" data-lng="-87.632354">4:13 pm</span></p>
+                            </div><div class="col-12 col-md-3 offset-lg-3 locations"><h3>Houston</h3><p>1000 Louisiana Street,<br>Suite 5250<br>Houston, TX 77002<br><a href="tel: 1-713-589-3383">+1 (713) 589 3383</a><br>Local time: <span class="officeCurrTime" data-lat="29.747894" data-lng="-95.418262">4:13 pm</span></p>
+                            </div><div class="col-12 col-md-3  locations"><h3>San Diego</h3><p>4660 La Jolla Village Drive,<br>Suite 1040<br>San Diego, CA 92122<br><a href="tel:1-858-200-3060">+1 (858) 200 3060</a><br>Local time: <span class="officeCurrTime" data-lat="32.874702" data-lng="-117.206912">2:13 pm</span></p>
+                            </div><div class="col-12 col-md-3  locations"><h3>San Francisco</h3><p>1 Montgomery Street,<br>Floor 37<br>San Francisco, CA 94104<br><a href="tel:1-415-364-7112">+1 (415) 364 7112</a><br>Local time: <span class="officeCurrTime" data-lat="37.789465" data-lng="-122.402906">2:13 pm</span></p>
+                            </div></div></div></div>			</div>
+            <script>
+                (function($) {
+                    jQuery('.officeCurrTime').each(function(e) {
+                        var localTime = $(this);
+                        var lat = localTime.attr('data-lat');
+                        var lng = localTime.attr('data-lng');
+                        var t = setTimeout(function() {
+                            $.ajax({
+                                type: "GET",
+                                url: "https://api.timezonedb.com/?key=3H25RTM0W0R5&format=json&lat="+ lat +"&lng="+ lng +"",
+                                dataType: "jsonp",
+                            }).done(function(data) {
+                                var time = moment.utc(data.timestamp, "X");
+                                localTime.html(time.format("h:mm") +' '+ time.format("a"));
+                            })
+                        }, 1500 * e);
+                    });
+                })(jQuery);
+            </script>
+
+
+        </div>
+    </div>
+    <!-- end: North America -->
+
+    <!-- start: Europe -->
+    <div id="officeLocations" class="officeLocations" style="padding-bottom: 0px">
+
+
+        <div class="container colsTopBorder clearfix">
+
+            <div class="row clearfix">
+                <div class="col col-12" rel="Europe"><div class="container"><div class="row ">	<h2 class="col-lg-3">Europe</h2><div class="col-12 col-md-3  locations"><h3>London</h3><p>4th Floor, Nuffield House,<br>41-46 Piccadilly<br>London W1J 0DS<br><a href="tel:44-0-20-7292-2100">+44 (0) 20 7292 2100</a><br>Local time: <span class="officeCurrTime" data-lat="51.508816" data-lng="-0.138272">10:13 pm</span></p>
+                            </div></div></div></div>			</div>
+            <script>
+                (function($) {
+                    jQuery('.officeCurrTime').each(function(e) {
+                        var localTime = $(this);
+                        var lat = localTime.attr('data-lat');
+                        var lng = localTime.attr('data-lng');
+                        var t = setTimeout(function() {
+                            $.ajax({
+                                type: "GET",
+                                url: "https://api.timezonedb.com/?key=3H25RTM0W0R5&format=json&lat="+ lat +"&lng="+ lng +"",
+                                dataType: "jsonp",
+                            }).done(function(data) {
+                                var time = moment.utc(data.timestamp, "X");
+                                localTime.html(time.format("h:mm") +' '+ time.format("a"));
+                            })
+                        }, 1500 * e);
+                    });
+                })(jQuery);
+            </script>
+
+
+        </div>
+    </div>
+    <!-- end: Europe -->
+
+    <!-- start: Asia -->
+    <div id="officeLocations" class="officeLocations" style="padding-bottom: 0px;">
+
+
+        <div class="container colsTopBorder clearfix">
+
+            <div class="row clearfix">
+                <div class="col col-12" rel="Asia"><div class="container"><div class="row ">	<h2 class="col-lg-3">Asia</h2><div class="col-12 col-md-3  locations"><h3>Hong Kong</h3><p>Rm. 607-8<br>New World Tower One<br>16-18 Queen’s Road Central<br>Central Hong Kong, SAR<br><a href="tel: 852-3792-0151">+852 3792 0151</a><br>Local time: <span class="officeCurrTime" data-lat="22.285237" data-lng="114.1592628">6:13 am</span></p>
+                            </div><div class="col-12 col-md-3  locations"><h3>Shanghai</h3><p>2106, K. Wah Center<br>1010 Huai Hai Road (M)<br>Xu Hui District, Shanghai 200031<br>P.R. China<br><a href="tel: 86-21-6136-0200">+86 21 6136 0200</a><br>Local time: <span class="officeCurrTime" data-lat="31.209134" data-lng="121.455786">6:13 am</span></p>
+                            </div></div></div></div>			</div>
+            <script>
+                (function($) {
+                    jQuery('.officeCurrTime').each(function(e) {
+                        var localTime = $(this);
+                        var lat = localTime.attr('data-lat');
+                        var lng = localTime.attr('data-lng');
+                        var t = setTimeout(function() {
+                            $.ajax({
+                                type: "GET",
+                                url: "https://api.timezonedb.com/?key=3H25RTM0W0R5&format=json&lat="+ lat +"&lng="+ lng +"",
+                                dataType: "jsonp",
+                            }).done(function(data) {
+                                var time = moment.utc(data.timestamp, "X");
+                                localTime.html(time.format("h:mm") +' '+ time.format("a"));
+                            })
+                        }, 1500 * e);
+                    });
+                })(jQuery);
+            </script>
+
+
+        </div>
+    </div>
+  </article>
+  <app-footer></app-footer>
