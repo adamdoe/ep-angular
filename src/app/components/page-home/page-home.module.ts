@@ -24,8 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     CommonModule,
+    NgbModule,
     SharedModule,
-    NgbModule
   ]
 })
 export class PageHomeModule { }

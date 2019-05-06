@@ -1,11 +1,13 @@
 <section class="contact-mobile contact-container footer__learn-more" style="background-image: url('./assets/img/background.png');">
   <div class="container-fluid">
     <h2 class="text-uppercase text-center">{{ prefooterData.message }}</h2>
-    <app-button
-      [text]="'Contact Us'"
-      [type]="'white'"
-    >
+    <a routerLink="/contact">
+      <app-button
+        [text]="'Contact Us'"
+        [type]="'white'"
+      >
     </app-button>
+  </a>
   </div>
 </section>
 

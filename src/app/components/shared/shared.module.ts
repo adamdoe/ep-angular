@@ -15,6 +15,7 @@ import { PageTitleComponent } from './page-title/page-title.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component';
+import { PageTemplateComponent } from './page-template/page-template.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,8 @@ import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component'
     FooterSocialIconsComponent,
     PreFooterComponent,
     PageTitleComponent,
-    PageTitleComponent,
     FooterMenuComponent,
+    PageTemplateComponent
   ],
   imports: [
     CommonModule,
@@ -51,6 +52,7 @@ import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component'
     FooterSocialIconsComponent,
     PreFooterComponent,
     PageTitleComponent,
+    PageTemplateComponent
   ]
 })
 export class SharedModule { }

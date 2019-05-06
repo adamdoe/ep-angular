@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageContactUsComponent } from './components/page-contact-us/page-contact-us.component';
-import { PageWhoWeAreComponent } from './components/page-who-we-are/page-who-we-are.component';
-import { PageWhyChooseUsComponent } from './components/page-why-choose-us/page-why-choose-us.component';
-import { PageOurApproachComponent } from './components/page-our-approach/page-our-approach.component';
 import { PageErrorComponent } from './components/page-error/page-error.component';
 import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/page-privacy-policy.component';
 import { PageTermsComponent } from './components/page-terms/page-terms.component';
 import { PageVideosComponent } from './components/page-videos/page-videos.component';
 import { PageNewsComponent } from './components/page-news/page-news.component';
+import { PageOurTeamComponent } from './components/page-our-team/page-our-team.component';
+import { PageWhoWeAreComponent } from './components/about/page-who-we-are/page-who-we-are.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
+import { CapabilitiesComponent } from './components/capabilities/capabilities.component';
 
 const routes: Routes = [
   { 
     path: '', 
     component: PageHomeComponent, 
-    pathMatch: 'full', 
     data: { title: 'Home | Eaton Partners'} 
   },
   { 
@@ -24,34 +24,18 @@ const routes: Routes = [
     data: { title: 'Contact Us | Eaton Partners'} 
   },
   { 
-    path: 'about', 
-    data: { title: 'Who We Are | Eaton Partners'},
-    children: [
-      { 
-        path: 'who-we-are', 
-        component: PageWhoWeAreComponent,
-        data: { title: 'Who We Are | Eaton Partners'} 
-     
-      },
-      { 
-        path: 'why-choose-us', 
-        component: PageWhyChooseUsComponent,
-        data: { title: 'Why Choose Us | Eaton Partners'} 
-     
-      },
-      { 
-        path: 'our-approach', 
-        component: PageOurApproachComponent,
-        data: { title: 'Our Approach | Eaton Partners'} 
-      },
-    ]
- 
-  },
-  { 
     path: 'insights/news', 
-    component: PageNewsComponent,
-    data: { title: 'News & Insights | Eaton Partners'} 
-
+    data: { title: 'News & Insights | Eaton Partners'},
+    children: [
+      {
+        path: '',
+        component: PageNewsComponent
+      },
+      { 
+        path: ':id',
+        component: SinglePostComponent
+      }
+    ] 
   },  
   { 
     path: 'insights/videos', 
@@ -68,18 +52,28 @@ const routes: Routes = [
   { 
     path: 'terms-and-conditions', 
     component: PageTermsComponent,
-    data: { title: 'Terms & | Eaton Partners'} 
+    data: { title: 'Terms & Conditions | Eaton Partners'} 
  
   },
   { 
-    path: '**', 
-    component: PageErrorComponent, 
-    data: { title: '404 | Eaton Partners'} 
-  },
+    path: 'capabilities', 
+    data: { title: 'Capabilities | Eaton Partners'},
+    children: [
+      {
+        path: ':slug',
+        component: CapabilitiesComponent
+      },
+    ] 
+  },  
+  // { 
+  //   path: '**', 
+  //   component: PageErrorComponent, 
+  //   data: { title: '404 | Eaton Partners'} 
+  // },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

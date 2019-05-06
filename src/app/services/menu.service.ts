@@ -29,6 +29,18 @@ export class MenuService {
               parentId: 1,
               text: 'Our Approach',
               link: 'about/our-approach',
+            },
+            {
+              id: 4,
+              parentId: 1,
+              text: 'Our Team',
+              link: 'about/our-team',
+            },
+            {
+              id: 5,
+              parentId: 1,
+              text: 'Office Locations',
+              link: 'about/office-locations',
             }
           ]
         },

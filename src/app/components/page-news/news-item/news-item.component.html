@@ -1,16 +1,22 @@
-<div class="blogShadow"><a href="#!" title="Leveraging Eaton’s Leading Private Equity Advisory Platform, Eaton ...">
-  <div class="news_item-category category">
-    Press							</div>
-    </a><div class="news_item-card-body news-item card-body"><a href="#!" title="Leveraging Eaton’s Leading Private Equity Advisory Platform, Eaton ...">
-    <div class="title-wrapper">
-      <h4>{{ post.title }}</h4>
+<div class="blogShadow">
+  <a 
+    routerLink="['/about', post.id]" 
+    title=""
+  >
+    <div class="news_item-category category">Dynamic Category Here</div>
+  </a>
+  <div class="news_item-card-body news-item card-body">
+    <a 
+      routerLink="['/about', post.id]" 
+      title=""
+    >
+      <div class="title-wrapper">
+        <h4>{{ post.title }}</h4>
+      </div>
+      <time>Mar 26, 2019</time>
+      </a><p class="card-text">
+          {{ post.body }}
+        <br/><br/>
+        <a routerLink="['/insights/news', post.id]">Read more</a></p>
     </div>
-    <time>Mar 26, 2019</time>
-    </a><p class="card-text">
-      <a href="#!" title="Leveraging Eaton’s Leading Private Equity Advisory Platform, Eaton ...">
-        {{ post.body }}
-      </a>
-      <br/><br/>
-      <a href="#!">Read more</a></p>
-  </div>
 </div>
