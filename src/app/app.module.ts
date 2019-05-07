@@ -8,15 +8,12 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './components/shared/shared.module';
 
 // TODO: Capability Components.
-
-import { PageVideosComponent } from './components/page-videos/page-videos.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageHomeModule } from './components/page-home/page-home.module';
+import { PageVideosModule } from './components/page-videos/page-videos.module';
 
 import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/page-privacy-policy.component';
 import { PageTermsComponent } from './components/page-terms/page-terms.component';
-import { VideoItemComponent } from './components/page-videos/video-item/video-item.component';
 import { PageNewsModule } from './components/page-news/page-news.module';
 import { PageErrorModule } from './components/page-error/page-error.module';
 import { PageContactUsModule } from './components/page-contact-us/page-contact-us.module';
@@ -33,13 +30,15 @@ import { TitleSectionComponent } from './components/capabilities/title-section/t
 import { TitleComponent } from './components/page-our-team/title/title.component';
 import { FilterComponent } from './components/page-our-team/filter/filter.component';
 
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { EmployeeItemComponent } from './components/page-our-team/employee-item/employee-item.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PageVideosComponent,
     PagePrivacyPolicyComponent,
     PageTermsComponent,
-    VideoItemComponent,
     PageOurTeamComponent,
     SinglePostComponent,
     PostTitleComponent,
@@ -51,17 +50,21 @@ import { FilterComponent } from './components/page-our-team/filter/filter.compon
     TitleSectionComponent,
     TitleComponent,
     FilterComponent,
+    EmployeeItemComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     NgbModule,
+    NgSelectModule,
+    FormsModule,
     HttpClientModule,
     SharedModule,
     PageErrorModule,
     PageContactUsModule,
     PageNewsModule,
     PageHomeModule,
+    PageVideosModule,
     AboutModule,
     AppRoutingModule,
   ],

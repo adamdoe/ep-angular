@@ -33,8 +33,6 @@
               "src/styles.less"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/selectboxit/src/javascripts/jquery.selectBoxIt.min.js"
             ],
             "es5BrowserSupport": true
           },
