@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
+<app-title-no-background>Our Team</app-title-no-background>
 <article class="mainContainer">
-  <app-our-team-title></app-our-team-title>
   <app-our-team-filter></app-our-team-filter>
   
   <section id="teamContainer">
@@ -11,20 +11,22 @@
             *ngFor="let employee of employees; index as i"
 
           >
-
+          
             <a 
-              href="https://eaton-partners.com/about/our-team/joshua-m-barenbaum/" 
-              *ngIf="i < offset"
+            href="https://eaton-partners.com/about/our-team/joshua-m-barenbaum/" 
+            *ngIf="i < offset"
             >
-              <figure class="zoom">
-                <div class="image"><img width="321" height="321" src="https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum.png" class="lazy wp-post-image" alt="Joshua M. Barenbaum" srcset="https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum.png 321w, https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum-50x50.png 50w, https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum-261x261.png 261w, https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum-40x40.png 40w" sizes="(max-width: 321px) 100vw, 321px"></div>
-              </figure>
-              <p class="teamName">{{employee.firstName}} {{employee.lastName}}</p>
-              <p class="teamTitle">{{employee.title}}</p>
-              
-              <!-- Run Query To Get Employee Location -->
-              <span class="teamLocationWrapper"><span class="teamLocation">Rowayton, CT</span></span>
-              <!-- /Run Query To Get Employee Location -->
+              <div class="employee-item">
+                <figure class="zoom">
+                  <div class="image"><img width="321" height="321" src="https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum.png" class="lazy wp-post-image" alt="Joshua M. Barenbaum" srcset="https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum.png 321w, https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum-50x50.png 50w, https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum-261x261.png 261w, https://eaton-partners.com/wp-content/uploads/2014/02/Barenbaum-40x40.png 40w" sizes="(max-width: 321px) 100vw, 321px"></div>
+                </figure>
+                <p class="teamName">{{employee.firstName}} {{employee.lastName}}</p>
+                <p class="teamTitle">{{employee.title}}</p>
+                
+                <!-- Run Query To Get Employee Location -->
+                <span class="teamLocationWrapper"><span class="teamLocation">Rowayton, CT</span></span>
+                <!-- /Run Query To Get Employee Location -->
+              </div>
             </a>
           </div>
   
@@ -32,7 +34,7 @@
     </div>
   </section>
 
-  <div class="container">
+  <div class="container" *ngIf="employees.length > offset">
     <div class="row">
       <app-button 
         type="blue" 

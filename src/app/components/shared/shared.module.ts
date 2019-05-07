@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component';
 import { PageTemplateComponent } from './page-template/page-template.component';
+import { TitleNoBackgroundComponent } from './title-no-background/title-no-background.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { PageTemplateComponent } from './page-template/page-template.component';
     PreFooterComponent,
     PageTitleComponent,
     FooterMenuComponent,
-    PageTemplateComponent
+    PageTemplateComponent,
+    TitleNoBackgroundComponent,
+    TitleNoBackgroundComponent
   ],
   imports: [
     CommonModule,
@@ -52,7 +55,8 @@ import { PageTemplateComponent } from './page-template/page-template.component';
     FooterSocialIconsComponent,
     PreFooterComponent,
     PageTitleComponent,
-    PageTemplateComponent
+    PageTemplateComponent,
+    TitleNoBackgroundComponent
   ]
 })
 export class SharedModule { }

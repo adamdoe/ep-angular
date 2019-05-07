@@ -1,9 +1,8 @@
 <section id="map" class="container home_map_section section-wrapper">
     <div class="">
-            <app-section-title>Global Presence</app-section-title>
-
-
+        <app-section-title>Global Presence</app-section-title>
         <div class="row home_map_section__wrapper">
+
             <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000">
                 <img id="mapImage" class="lazy" src="{{ globalOfficeData.imagePath }}" alt="Eaton Partners Office Map" >
             </div>
@@ -11,10 +10,12 @@
             <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1000">
                 <p [ngStyle]="{'margin-bottom': '35px'}">{{ globalOfficeData.paragraph }}</p>
                 <div class="text-center">
-                    <app-button 
-                    [text]="'View Offices'"
-                    [type]="'blue'"
-                    ></app-button>
+                    <a routerLink="'/about/office-locations'">
+                        <app-button 
+                        [text]="'View Offices'"
+                        [type]="'blue'"
+                        ></app-button>
+                    </a>
                 </div>
             </div>
         </div>
