@@ -110,9 +110,10 @@ export class OfficeService {
       long: ''
     },
     {
-      id: 1,
+      id: 6,
       street: [
-        '131 Rowayton Avenue',
+        '1 Montgomery Street',
+        'Floor 37'
       ],
       city: 'San Francisco',
       stateAbbr: 'CA',
@@ -128,9 +129,74 @@ export class OfficeService {
       ,
       lat: '',
       long: ''
-    },             
+    }, 
+    {
+      id: 7,
+      street: [
+        '4th Floor, Nuffield House',
+        '41-46 Piccadilly'
+      ],
+      city: 'London',
+      stateAbbr: '',
+      state: '',
+      country: 'United Kingdom',
+      continent: 'Europe',
+      zipcode: 'W1J 0DS',
+      contact: 
+        {
+          phone: '+44 (0) 20 7292 2100',
+          email: '',
+        }
+      ,
+      lat: '',
+      long: ''
+    }, 
+    {
+      id: 8,
+      street: [
+        'Rm. 1501',
+        'New World Tower One',
+        '16-18 Queen’s Road Central'
+      ],
+      city: 'Hong Kong',
+      stateAbbr: 'SAR',
+      state: '',
+      country: '',
+      continent: 'Asia',
+      zipcode: 'W1J 0DS',
+      contact: 
+        {
+          phone: '+852 3792 0151',
+          email: '',
+        }
+      ,
+      lat: '',
+      long: ''
+    },              
+    {
+      id: 7,
+      street: [
+        '2106, K. Wah Center',
+        '1010 Huai Hai Road (M)'
+      ],
+      city: 'Shanghai',
+      stateAbbr: '',
+      state: '',
+      country: 'P.R. China',
+      continent: 'Asia',
+      zipcode: '200031',
+      contact: 
+        {
+          phone: '+86 21 6136 0200',
+          email: '',
+        }
+      ,
+      lat: '',
+      long: ''
+    },      
 
     
   ];
   constructor() { }
+
 }

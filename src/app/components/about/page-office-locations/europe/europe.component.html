@@ -1,0 +1,37 @@
+<!-- EU -->
+<div class="container colsTopBorder clearfix">
+    <div class="row clearfix">
+      <div class="col col-12" rel="North America">
+        <div class="container">
+          <div class="row ">	
+  
+            <h2 class="col-lg-3">Europe</h2>
+  
+            <!-- loop here -->
+            <div 
+              *ngFor="let office of offices; let i = index"
+              
+            >
+            <div
+              *ngIf="office.continent === 'Europe'"
+              class="col-12  locations"
+              [ngClass]="(i + 1) % 4 == 0 ? 'offset-md-3':''"
+
+            >
+
+
+
+                  <h3>{{office.city}}</h3>
+                  <p *ngFor="let street of office.street">{{street}}</p>
+                  <p>{{office.city}}, {{office.stateAbbr}} {{office.zipcode}}</p>
+                  <a href="{{office.contact.phone}}">{{office.contact.phone }}</a>
+                </div>
+            </div>
+            <!-- /loop here -->
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: EU -->

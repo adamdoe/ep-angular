@@ -1,114 +1,14 @@
 <app-navbar></app-navbar>
+<app-page-title>Offices</app-page-title>
 <article class="mainContainer">
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-uppercase text-center">Offices</h1>
-                </div>
-            </div>
-        </div>
-    </div>		<!-- start: North America -->
+
+    <!-- OFFICES -->
     <div id="officeLocations" class="officeLocations" style="padding-bottom: 0px">
-
-
-        <div class="container colsTopBorder clearfix">
-
-            <div class="row clearfix">
-              <div class="col col-12" rel="North America">
-                <div class="container">
-                  <div class="row ">	
-                    
-                  <h2 class="col-lg-3">North America</h2>
-                    
-                    <!-- loop here -->
-                    <section class="col-12 col-md-3 locations" *ngFor="let office of offices">
-                      <h3>{{office.city}}</h3>
-                      <p *ngFor="let street of office.street">
-                        {{street}}
-                      </p>
-                      <p>{{office.city}}, {{office.stateAbbr}} {{office.zipcode}}</p>
-                      <a href="{{office.contact.phone}}">{{office.contact.phone }}</a>
-                    </section>
-                    <!-- /loop here -->
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-        </div>
+        <app-north-america></app-north-america>
+        <app-europe></app-europe>
+        <app-asia></app-asia>
     </div>
-    <!-- end: North America -->
+    <!-- /OFFICES -->
 
-    <!-- start: Europe -->
-    <div id="officeLocations" class="officeLocations" style="padding-bottom: 0px">
-
-
-        <div class="container colsTopBorder clearfix">
-
-            <div class="row clearfix">
-                <div class="col col-12" rel="Europe"><div class="container"><div class="row ">	<h2 class="col-lg-3">Europe</h2><div class="col-12 col-md-3  locations"><h3>London</h3><p>4th Floor, Nuffield House,<br>41-46 Piccadilly<br>London W1J 0DS<br><a href="tel:44-0-20-7292-2100">+44 (0) 20 7292 2100</a><br>Local time: <span class="officeCurrTime" data-lat="51.508816" data-lng="-0.138272">10:13 pm</span></p>
-                            </div></div></div></div>			</div>
-            <script>
-                (function($) {
-                    jQuery('.officeCurrTime').each(function(e) {
-                        var localTime = $(this);
-                        var lat = localTime.attr('data-lat');
-                        var lng = localTime.attr('data-lng');
-                        var t = setTimeout(function() {
-                            $.ajax({
-                                type: "GET",
-                                url: "https://api.timezonedb.com/?key=3H25RTM0W0R5&format=json&lat="+ lat +"&lng="+ lng +"",
-                                dataType: "jsonp",
-                            }).done(function(data) {
-                                var time = moment.utc(data.timestamp, "X");
-                                localTime.html(time.format("h:mm") +' '+ time.format("a"));
-                            })
-                        }, 1500 * e);
-                    });
-                })(jQuery);
-            </script>
-
-
-        </div>
-    </div>
-    <!-- end: Europe -->
-
-    <!-- start: Asia -->
-    <div id="officeLocations" class="officeLocations" style="padding-bottom: 0px;">
-
-
-        <div class="container colsTopBorder clearfix">
-
-            <div class="row clearfix">
-                <div class="col col-12" rel="Asia"><div class="container"><div class="row ">	<h2 class="col-lg-3">Asia</h2><div class="col-12 col-md-3  locations"><h3>Hong Kong</h3><p>Rm. 607-8<br>New World Tower One<br>16-18 Queen’s Road Central<br>Central Hong Kong, SAR<br><a href="tel: 852-3792-0151">+852 3792 0151</a><br>Local time: <span class="officeCurrTime" data-lat="22.285237" data-lng="114.1592628">6:13 am</span></p>
-                            </div><div class="col-12 col-md-3  locations"><h3>Shanghai</h3><p>2106, K. Wah Center<br>1010 Huai Hai Road (M)<br>Xu Hui District, Shanghai 200031<br>P.R. China<br><a href="tel: 86-21-6136-0200">+86 21 6136 0200</a><br>Local time: <span class="officeCurrTime" data-lat="31.209134" data-lng="121.455786">6:13 am</span></p>
-                            </div></div></div></div>			</div>
-            <script>
-                (function($) {
-                    jQuery('.officeCurrTime').each(function(e) {
-                        var localTime = $(this);
-                        var lat = localTime.attr('data-lat');
-                        var lng = localTime.attr('data-lng');
-                        var t = setTimeout(function() {
-                            $.ajax({
-                                type: "GET",
-                                url: "https://api.timezonedb.com/?key=3H25RTM0W0R5&format=json&lat="+ lat +"&lng="+ lng +"",
-                                dataType: "jsonp",
-                            }).done(function(data) {
-                                var time = moment.utc(data.timestamp, "X");
-                                localTime.html(time.format("h:mm") +' '+ time.format("a"));
-                            })
-                        }, 1500 * e);
-                    });
-                })(jQuery);
-            </script>
-
-
-        </div>
-    </div>
   </article>
   <app-footer></app-footer>

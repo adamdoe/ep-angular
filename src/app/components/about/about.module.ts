@@ -9,6 +9,9 @@ import { AboutRoutingModule } from './about-routing.module';
 import { ExperienceComponent } from './page-why-choose-us/experience/experience.component';
 import { GlobalReachComponent } from './page-why-choose-us/global-reach/global-reach.component';
 import { PageOfficeLocationsComponent } from './page-office-locations/page-office-locations.component';
+import { NorthAmericaComponent } from './page-office-locations/north-america/north-america.component';
+import { EuropeComponent } from './page-office-locations/europe/europe.component';
+import { AsiaComponent } from './page-office-locations/asia/asia.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { PageOfficeLocationsComponent } from './page-office-locations/page-offic
     ExperienceComponent,
     GlobalReachComponent,
     AboutComponent,
-    PageOfficeLocationsComponent
+    PageOfficeLocationsComponent,
+    NorthAmericaComponent,
+    EuropeComponent,
+    AsiaComponent
   ],
   imports: [
     CommonModule,
