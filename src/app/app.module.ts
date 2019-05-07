@@ -30,6 +30,8 @@ import { SplitSectionComponent } from './components/capabilities/split-section/s
 import { TeamSectionComponent } from './components/capabilities/team-section/team-section.component';
 import { TombstoneSectionComponent } from './components/capabilities/tombstone-section/tombstone-section.component';
 import { TitleSectionComponent } from './components/capabilities/title-section/title-section.component';
+import { TitleComponent } from './components/page-our-team/title/title.component';
+import { FilterComponent } from './components/page-our-team/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { TitleSectionComponent } from './components/capabilities/title-section/t
     TeamSectionComponent,
     TombstoneSectionComponent,
     TitleSectionComponent,
+    TitleComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserAnimationsModule,

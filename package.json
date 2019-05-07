@@ -23,8 +23,10 @@
     "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "jquery": "^3.4.1",
     "ngx-owl-carousel-o": "^1.1.2",
     "rxjs": "~6.3.3",
+    "selectboxit": "^3.8.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
