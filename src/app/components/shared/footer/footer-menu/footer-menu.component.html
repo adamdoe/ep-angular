@@ -1,13 +1,12 @@
-<div class="container">
+<div class="container d-none d-lg-block">
     <div class="row">
         <div class="col-12">	
           <div class="container">	
             <nav class="row" role="navigation" label="footer-menu">	
               
               <!-- Parent Loop -->
-              <div class="col-3" *ngFor="let menuItem of menu; index as i">
-                <div class="menu-pre-footer-1-container">
-                  <ul id="menu-pre-footer-1" class="pre-footer-1">
+              <div class="col-3" *ngFor="let menuItem of footerDesktopMenu; index as i">
+                  <ul>
 
                     <!-- Parent Menu Name -->
                     <li>
@@ -20,9 +19,7 @@
                       <a href="{{children.link}}">{{children.text}}</a>
                     </li>
                     <!-- /Children Loop -->
-
                   </ul>
-                </div>					
               </div>
               <!-- /Parent Loop -->
 
@@ -31,4 +28,36 @@
           </div>
         </div>
       </div>
+</div>
+
+<div class="container d-block d-lg-none footer__mobile-menu">
+  <div class="row">
+    <div class="col-12">
+        <div class="container">	
+            <nav class="row" role="navigation" label="footer-menu">	
+              
+              <!-- Parent Loop -->
+              <div class="col-12" *ngFor="let menuItem of footerMobileMenu; index as i">
+                  <ul>
+
+                    <!-- Parent Menu Name -->
+                    <li>
+                      <a href="#!">{{menuItem.text}}</a>
+                    </li>
+                    <!-- /Parent Menu Name -->
+
+                    <!-- Children Loop -->
+                    <li *ngFor="let children of menuItem.children">
+                      <a href="{{children.link}}">{{children.text}}</a>
+                    </li>
+                    <!-- /Children Loop -->
+                  </ul>
+              </div>
+              <!-- /Parent Loop -->
+
+
+            </nav>
+          </div>
+    </div>
+  </div>
 </div>

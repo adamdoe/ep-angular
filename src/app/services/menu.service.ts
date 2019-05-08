@@ -127,7 +127,7 @@ export class MenuService {
         }
 
       ],
-      "footer": 
+      "footerDesktop": 
         [
           {
             id: 1,
@@ -228,6 +228,28 @@ export class MenuService {
               }
             ]
           },
+          {
+            id: 2,
+            text: "Legal",
+            link: '#!',
+            children: [
+              {
+                id: 1,
+                parentId: 2,
+                text: 'Disclosure, Terms and Conditions',
+                link: '/terms-and-conditions'
+              },
+              {
+                id: 2,
+                parentId: 2,
+                text: 'Privacy Policy',
+                link: '/privacy-policy'
+              }
+            ]
+          },
+        ],
+        "footerMobile": 
+        [
           {
             id: 2,
             text: "Legal",

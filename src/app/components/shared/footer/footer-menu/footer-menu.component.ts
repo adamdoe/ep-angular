@@ -9,12 +9,14 @@ import { MenuService } from 'src/app/services/menu.service';
 export class FooterMenuComponent implements OnInit {
 
 
-  menu;
+  footerDesktopMenu;
+  footerMobileMenu
   constructor(private menuService: MenuService) { }
 
   ngOnInit() {
-    this.menu = this.menuService.getMenus().footer;
-    console.log('EP Footer Menu', this.menu);
+    this.footerDesktopMenu = this.menuService.getMenus().footerDesktop;
+    this.footerMobileMenu = this.menuService.getMenus().footerMobile;
+
   }
 
 

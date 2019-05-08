@@ -10,6 +10,7 @@ import { CapabilitiesComponent } from './capabilities/capabilities.component';
 import { CapabilityItemComponent } from './capabilities/capability-item/capability-item.component';
 import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     NgbModule,
     SharedModule,
+    SlickCarouselModule
   ]
 })
 export class PageHomeModule { }

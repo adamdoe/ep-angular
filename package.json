@@ -26,8 +26,10 @@
     "core-js": "^2.5.4",
     "jquery": "^3.4.1",
     "ngx-owl-carousel-o": "^1.1.2",
+    "ngx-slick-carousel": "^0.4.4",
     "rxjs": "~6.3.3",
     "selectboxit": "^3.8.2",
+    "slick-carousel": "^1.8.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

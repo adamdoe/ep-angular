@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './components/shared/shared.module';
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 // TODO: Capability Components.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageHomeModule } from './components/page-home/page-home.module';
@@ -67,6 +69,8 @@ import { EmployeeItemComponent } from './components/page-our-team/employee-item/
     PageVideosModule,
     AboutModule,
     AppRoutingModule,
+    SlickCarouselModule
+
   ],
   providers: [
     Title
