@@ -29,7 +29,7 @@ export class TestimonialSliderComponent implements OnInit {
   }
   
   slickInit(e) {
-    console.log('slick initialized');
+    console.log('Testimonial Slider Initialized.');
   }
   
   breakpoint(e) {
