@@ -25,6 +25,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "jquery": "^3.4.1",
+    "ng-animate": "^0.3.4",
     "ngx-owl-carousel-o": "^1.1.2",
     "ngx-slick-carousel": "^0.4.4",
     "rxjs": "~6.3.3",

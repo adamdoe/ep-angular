@@ -11,12 +11,14 @@
       title=""
     >
       <div class="title-wrapper">
-        <h4>{{ post.title }}</h4>
+        <h4 [innerHtml]="post.title.rendered"></h4>
       </div>
-      <time>Mar 26, 2019</time>
-      </a><p class="card-text">
-          {{ post.body }}
-        <br/><br/>
-        <a routerLink="['/insights/news', post.id]">Read more</a></p>
+      <time>{{ postDate }}</time>
+      </a>
+      <p 
+        class="card-text"
+        [innerHtml]="post.content.rendered"
+      >
+      </p>
     </div>
 </div>

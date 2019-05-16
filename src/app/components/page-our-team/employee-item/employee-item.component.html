@@ -1,0 +1,30 @@
+<a 
+href="https://eaton-partners.com/about/our-team/joshua-m-barenbaum/" 
+>
+  <div class="employee-item">
+    <figure class="zoom">
+      <div 
+      class="image"
+      *ngIf="employee.featured_media > 0"
+      >
+        <img 
+          width="321" 
+          height="321" 
+          src="{{employee._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}}" 
+          class="lazy wp-post-image" 
+          alt="{{employee.title.rendered}}" 
+          sizes="(max-width: 321px) 100vw, 321px">
+      </div>
+    </figure>
+    <p class="teamName">{{employee.title.rendered }}</p>
+    <p class="teamTitle">{{employee.job_title}}</p>
+    
+    <!-- Run Query To Get Employee Location -->
+    <span class="teamLocationWrapper">
+      <span class="teamLocation">
+        {{offices}}
+      </span>
+    </span>
+    <!-- /Run Query To Get Employee Location -->
+  </div>
+</a>

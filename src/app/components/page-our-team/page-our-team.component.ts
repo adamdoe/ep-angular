@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamService } from 'src/app/services/team.service';
+import { WordpressService } from 'src/app/services/wordpress.service';
 
 @Component({
   selector: 'app-page-our-team',
@@ -12,13 +13,22 @@ export class PageOurTeamComponent implements OnInit {
   totalEmployees;
   offset;
   
-  constructor( private teamService: TeamService ) { }
+  constructor( 
+    private teamService: TeamService,
+    private wordpressService: WordpressService 
+    
+    ) { }
 
   ngOnInit() {
-    this.employees = this.teamService.teamMembers;
-    this.totalEmployees = this.teamService.getNumberOfEmployees();
-    this.offset = 12;
-    console.log('Total Employees: ', this.totalEmployees);
+    // this.employees = this.teamService.teamMembers;
+    // this.totalEmployees = this.teamService.getNumberOfEmployees();
+
+    this.wordpressService.getEmployees().subscribe(employees  => {
+      this.employees = employees;
+      console.log('Employees', this.employees);
+
+    });
+    
   }
 
   getMore() {
