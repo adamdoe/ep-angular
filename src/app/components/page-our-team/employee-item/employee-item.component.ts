@@ -11,7 +11,6 @@ import { WordpressService } from 'src/app/services/wordpress.service';
 export class EmployeeItemComponent implements OnInit {
   @Input() employee;
   totalEmployees;
-  offset = 12;
   offices = [];
   
   data = {

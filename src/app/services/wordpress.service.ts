@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WordpressService {
 
+  teamPageLimit = 12;
+
   constructor(private http: HttpClient) { }
 
   getPosts(): Observable<any[]> {

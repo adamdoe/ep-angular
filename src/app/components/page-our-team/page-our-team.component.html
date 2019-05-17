@@ -6,11 +6,13 @@
   <section id="teamContainer">
     <div class="container">
       <div class="row">
+
           <div
             class="col-12 col-md-6 col-lg-3"
-            *ngFor="let employee of employees"
+            *ngFor="let employee of employees; index as i"
           >
           <app-employee-item
+          *ngIf="i < offset"
           [employee]="employee"
           ></app-employee-item>
 
@@ -19,8 +21,22 @@
           <div #loading>
             loading...
           </div>
-  
-      </div>
+
+          
+        </div>
+        
+        <!-- Load More Button For Team -->
+        <div class="row" *ngIf="offset <= employees.length">
+            <app-button 
+              type="blue" 
+              text="LOAD MORE"
+              style="margin: 0 auto;"
+              (click)="getMore()"
+              >
+            </app-button>
+        </div>
+        <!-- /Load More Button For Team -->
+        
     </div>
   </section>
 </article>

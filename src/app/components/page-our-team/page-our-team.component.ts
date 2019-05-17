@@ -26,8 +26,9 @@ export class PageOurTeamComponent implements OnInit {
     this.wordpressService.getEmployees().subscribe(employees  => {
       this.employees = employees;
       console.log('Employees', this.employees);
-
     });
+
+    this.offset = this.wordpressService.teamPageLimit;
     
   }
 
