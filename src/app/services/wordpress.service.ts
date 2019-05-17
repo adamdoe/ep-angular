@@ -17,6 +17,10 @@ export class WordpressService {
     });
   }
 
+  getPage(id): Observable<any[]> {
+    return this.http.get<any[]>('https://eaton-partners.com/wp-json/wp/v2/pages/'+id, {});
+  }
+
   getVideos(): Observable<any []> {
     return this.http.get<any[]>('https://eaton-partners.com/wp-json/wp/v2/cpt-videos', {});
   }

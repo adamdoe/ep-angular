@@ -74,12 +74,6 @@ export class MenuService {
               link: '/capabilities/real-assets'
             },
             {
-              id: 5,
-              parentId: 2,
-              text: 'Private Credit',
-              link: '/capabilities/private-credit'
-            },
-            {
               id: 6,
               parentId: 2,
               text: 'Hedge Funds',

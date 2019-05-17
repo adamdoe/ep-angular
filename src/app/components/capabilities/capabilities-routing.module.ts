@@ -7,6 +7,7 @@ import { RealEstateComponent } from './real-estate/real-estate.component';
 import { RealAssetsComponent } from './real-assets/real-assets.component';
 import { GpadComponent } from './gpad/gpad.component';
 import { EmergingManagersComponent } from './emerging-managers/emerging-managers.component';
+import { HedgeFundsComponent } from './hedge-funds/hedge-funds.component';
 
 const routes: Routes = [
   
@@ -35,6 +36,11 @@ const routes: Routes = [
         path: 'real-assets',
         component: RealAssetsComponent,
         data: { title: 'Real Assets | Eaton Partners'}
+      },
+      {
+        path: 'hedge-funds',
+        component: HedgeFundsComponent,
+        data: { title: 'Hedge Funds | Eaton Partners'}
       },
       {
         path: 'secondary-advisory-directs',
