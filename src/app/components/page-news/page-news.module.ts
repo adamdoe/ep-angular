@@ -4,12 +4,14 @@ import { SharedModule } from '../shared/shared.module';
 import { PageNewsComponent } from './page-news.component';
 import { NewsItemComponent } from './news-item/news-item.component';
 import { ShortenTextPipe } from 'src/app/pipes/shorten-text.pipe';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
     PageNewsComponent,
     NewsItemComponent,
-    ShortenTextPipe
+    ShortenTextPipe,
+    FilterComponent
   ],
   imports: [
     CommonModule,
