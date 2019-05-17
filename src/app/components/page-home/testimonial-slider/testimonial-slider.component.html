@@ -14,9 +14,9 @@
         class="text-center"
         >
       <div ngxSlickItem *ngFor="let testimonial of testimonials" class="slide">
-      <p>{{testimonial.quote}}</p>
-      <p>&mdash; {{testimonial.name}}, {{testimonial.title}}</p>
-      <p>{{ testimonial.company }}</p>
+      <p>{{testimonial.testimonial_author_quote}}</p>
+      <p>&mdash; {{testimonial.testimonial_author_name}}</p>
+      <p>{{ testimonial.testimonial_author_position }}</p>
       </div>
       </ngx-slick-carousel>
       </div>

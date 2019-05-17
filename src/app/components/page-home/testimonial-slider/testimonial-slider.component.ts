@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TestimonialService } from 'src/app/services/testimonial.service';
+import { WordpressService } from 'src/app/services/wordpress.service';
 
 @Component({
   selector: 'app-testimonial-slider',
@@ -45,12 +46,16 @@ export class TestimonialSliderComponent implements OnInit {
   }
 
   constructor( 
-    private testimonialService: TestimonialService
+    private testimonialService: TestimonialService,
+    private wordpressService: WordpressService
   ) { }
 
   ngOnInit() {
 
-    this.testimonials = this.testimonialService.getTestimonials();
+    this.wordpressService.getTestimonials().subscribe(testimonials  => {
+      this.testimonials = testimonials;
+      console.log('Testimonials', this.testimonials);
+    });
     console.log('Testimonials', this.testimonials);
   }
 
