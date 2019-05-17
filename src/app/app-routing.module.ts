@@ -8,7 +8,6 @@ import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/pag
 import { PageTermsComponent } from './components/page-terms/page-terms.component';
 import { PageNewsComponent } from './components/page-news/page-news.component';
 import { SinglePostComponent } from './components/single-post/single-post.component';
-import { CapabilitiesComponent } from './components/capabilities/capabilities.component';
 
 const routes: Routes = [
   { 
@@ -46,17 +45,7 @@ const routes: Routes = [
     component: PageTermsComponent,
     data: { title: 'Terms & Conditions | Eaton Partners'} 
  
-  },
-  { 
-    path: 'capabilities', 
-    data: { title: 'Capabilities | Eaton Partners'},
-    children: [
-      {
-        path: ':slug',
-        component: CapabilitiesComponent
-      },
-    ] 
-  },  
+  }, 
   // { 
   //   path: '**', 
   //   component: PageErrorComponent, 
