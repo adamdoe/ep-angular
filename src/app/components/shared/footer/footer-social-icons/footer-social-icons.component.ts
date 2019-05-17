@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialService } from 'src/app/services/social.service';
 
 @Component({
   selector: 'app-footer-social-icons',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterSocialIconsComponent implements OnInit {
 
-  constructor() { }
+  linkedinLink;
+  twitterLink;
+
+  constructor( private socialService: SocialService ) { }
 
   ngOnInit() {
+    this.linkedinLink = this.socialService.links.linkedin;
+    this.twitterLink = this.socialService.links.twitter;
   }
 
 }
