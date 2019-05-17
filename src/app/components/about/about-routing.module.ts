@@ -4,8 +4,8 @@ import { PageWhoWeAreComponent } from './page-who-we-are/page-who-we-are.compone
 import { PageWhyChooseUsComponent } from './page-why-choose-us/page-why-choose-us.component';
 import { PageOurApproachComponent } from './page-our-approach/page-our-approach.component';
 import { AboutComponent } from './about.component';
-import { PageOurTeamComponent } from '../page-our-team/page-our-team.component';
 import { PageOfficeLocationsComponent } from './page-office-locations/page-office-locations.component';
+import { PageOurTeamComponent } from './page-our-team/page-our-team.component';
 
 const routes: Routes = [
   

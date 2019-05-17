@@ -14,7 +14,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageHomeModule } from './components/page-home/page-home.module';
 import { PageVideosModule } from './components/page-videos/page-videos.module';
-import { PageOurTeamModule } from './components/page-our-team/page-our-team.module';
 
 import { PagePrivacyPolicyComponent } from './components/page-privacy-policy/page-privacy-policy.component';
 import { PageTermsComponent } from './components/page-terms/page-terms.component';
@@ -64,7 +63,6 @@ import { FormsModule } from '@angular/forms';
     PageVideosModule,
     AboutModule,
     AppRoutingModule,
-    PageOurTeamModule
 
   ],
   providers: [

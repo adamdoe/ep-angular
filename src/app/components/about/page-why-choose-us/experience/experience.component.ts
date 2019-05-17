@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.less']
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceSectionComponent implements OnInit {
 
   constructor() { }
 
