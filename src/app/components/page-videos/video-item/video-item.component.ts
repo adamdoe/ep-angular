@@ -15,9 +15,10 @@ export class VideoItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.video);
-    this.video_link = 'https://fast.wistia.com/embed/medias/'+ this.video.video_id +'.jsonp';
-    console.log('video id', this.video_link);
+    //console.log(this.video);
+    //this.video = this.video;
+    //this.video_link = 'https://fast.wistia.com/embed/medias/'+ this.video.video_id +'.jsonp';
+    //console.log('video id', this.video_link);
   }
 
 }

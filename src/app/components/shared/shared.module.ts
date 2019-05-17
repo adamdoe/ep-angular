@@ -18,6 +18,7 @@ import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component'
 import { PageTemplateComponent } from './page-template/page-template.component';
 import { TitleNoBackgroundComponent } from './title-no-background/title-no-background.component';
 
+
 @NgModule({
   declarations: [
     SectionTitleComponent,
@@ -40,7 +41,7 @@ import { TitleNoBackgroundComponent } from './title-no-background/title-no-backg
   imports: [
     CommonModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   exports: [
     SectionTitleComponent,

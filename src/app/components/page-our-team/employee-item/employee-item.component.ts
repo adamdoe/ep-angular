@@ -13,6 +13,11 @@ export class EmployeeItemComponent implements OnInit {
   totalEmployees;
   offset = 12;
   offices = [];
+  
+  data = {
+    imagePath: './assets/img/avatar.png'
+  }
+  
   constructor( private teamService: TeamService,
     private wordpressService: WordpressService ) { }
 

@@ -4,8 +4,8 @@ href="https://eaton-partners.com/about/our-team/joshua-m-barenbaum/"
   <div class="employee-item">
     <figure class="zoom">
       <div 
-      class="image"
-      *ngIf="employee.featured_media > 0"
+        class="image"
+        *ngIf="employee.featured_media > 0; else avatar"
       >
         <img 
           width="321" 
@@ -13,8 +13,19 @@ href="https://eaton-partners.com/about/our-team/joshua-m-barenbaum/"
           src="{{employee._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}}" 
           class="lazy wp-post-image" 
           alt="{{employee.title.rendered}}" 
-          sizes="(max-width: 321px) 100vw, 321px">
+          sizes="(max-width: 321px) 100vw, 321px"
+          >
       </div>
+      <ng-template #avatar>
+        <img 
+        width="321" 
+        height="321" 
+        src="{{ data.imagePath }}" 
+        class="lazy wp-post-image" 
+        alt="{{employee.title.rendered}}" 
+        sizes="(max-width: 321px) 100vw, 321px"
+        >
+    </ng-template>
     </figure>
     <p class="teamName">{{employee.title.rendered }}</p>
     <p class="teamTitle">{{employee.job_title}}</p>
