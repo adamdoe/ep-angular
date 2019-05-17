@@ -13,12 +13,21 @@ figure.zoom .image {
     overflow: hidden;
     height: 261px !important;
 }
+figure {
+    height: 261px !important;
+}
+
+figure.zoom:hover .image img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
 
 figure.zoom .image img {
     width: 100%;
     height: auto;
     -webkit-transition: 0.6s ease;
     transition: 0.6s ease;
+    height: 261px;
 }
 
 .teamContainerInner a {
