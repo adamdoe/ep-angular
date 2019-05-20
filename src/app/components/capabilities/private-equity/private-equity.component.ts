@@ -11,6 +11,7 @@ export class PrivateEquityComponent implements OnInit {
   constructor( private wordpressService: WordpressService) { }
 
   ngOnInit() {
+
     this.wordpressService.getPage(2324).subscribe(data  => {
       this.data = data;
       console.log('Post Data: ', this.data);

@@ -1,0 +1,23 @@
+<section id="teamContainer" class="body-bg-2 slideUpContent teammembers-results capabilities_team come-in-content">
+    <div class="container">
+        <h2 class="text-uppercase text-center">Private Equity Origination Team</h2>
+                                
+        <ngx-slick-carousel class="carousel" 
+            #slickModal="slick-carousel" 
+            [config]="slideConfig" 
+            (init)="slickInit($event)"
+            (breakpoint)="breakpoint($event)"
+            (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)"
+        >
+
+      <app-team-member ngxSlickItem 
+        *ngFor="let employee of employees" class="slide"
+        [employeeId]="employee"
+        >
+      </app-team-member>
+      </ngx-slick-carousel>
+        
+                                
+    </div>
+</section>

@@ -1,1 +1,7 @@
 <app-title-section>{{data.title.rendered}}</app-title-section>
+<app-split-section
+    [columnTitleLeft]="data.custom_fields.column_title_left"
+    [columnTitleRight]="data.custom_fields.column_title_right"
+    [columnContentLeft]="data.custom_fields.column_content_left"
+    [columnContentRight]="data.custom_fields.column_content_right"
+></app-split-section>

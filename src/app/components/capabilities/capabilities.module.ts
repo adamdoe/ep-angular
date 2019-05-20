@@ -14,6 +14,8 @@ import { TitleSectionComponent } from './title-section/title-section.component';
 import { TombstoneSectionComponent } from './tombstone-section/tombstone-section.component';
 import { CapabilitiesComponent } from './capabilities.component';
 import { TeamSectionComponent } from './team-section/team-section.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { TeamMemberComponent } from './team-section/team-member/team-member.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { TeamSectionComponent } from './team-section/team-section.component';
     TitleSectionComponent,
     TombstoneSectionComponent,
     CapabilitiesComponent,
-    TeamSectionComponent
+    TeamSectionComponent,
+    TeamMemberComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
+    SlickCarouselModule,
     CapabilitiesRoutingModule
   ]
 })

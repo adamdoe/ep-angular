@@ -1,0 +1,15 @@
+<a class="teamMember" href="#">
+    <figure class="zoom">
+        <div class="image">
+            <img width="261" height="261" src="{{ image.media_details.sizes.full.source_url  }}" 
+            class="lazy wp-post-image loading" alt="{{ employee.title.rendered }}" 
+            sizes="(max-width: 261px) 100vw, 261px" 
+            data-was-processed="true">
+        </div>
+    </figure>
+    <span class="teamName">{{ employee.title.rendered }}</span>
+    <span class="teamTitle">{{ employee.job_title }}</span>
+    <span class="teamSecondaryTitle">{{ employee.secondary_job_title}} </span>
+    <span class="teamLocationWrapper"></span>
+    <span class="teamBio"></span>
+</a>

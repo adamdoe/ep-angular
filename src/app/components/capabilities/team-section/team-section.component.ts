@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { WordpressService } from 'src/app/services/wordpress.service';
 
 @Component({
   selector: 'app-team-section',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamSectionComponent implements OnInit {
 
-  constructor() { }
+  @Input() data;
+  employees;
+
+  slideConfig = {
+    "slidesToShow": 4, 
+    "slidesToScroll": 1,
+    "nextArrow":'<i class="fas fa-chevron-right"></i>',
+    "prevArrow":'<i class="fas fa-chevron-left"></i>',
+    "dots":false,
+    "infinite": false,
+    "arrows":true
+  };
+
+  constructor( private wordpressService: WordpressService) { }
 
   ngOnInit() {
+    this.employees = this.data.custom_fields.team_members_list_rlt;
   }
+
+  getEmployeeData(id) {
+    this.wordpressService.getEmployee(id).subscribe(data  => {
+      this.data = data;
+      console.log('Employee Data: ', this.data);
+    });
+  }
+
 
 }

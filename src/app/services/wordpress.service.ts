@@ -60,6 +60,16 @@ export class WordpressService {
     });
   }
 
+  getEmployee(id) {
+    return this.http.get<any[]>('https://eaton-partners.com/wp-json/wp/v2/team/' + id, {
+    });
+  }
+
+  getEmployeeImage(id) {
+    return this.http.get<any[]>('https://eaton-partners.com/wp-json/wp/v2/media/' + id, {
+    });
+  }
+
   getEmployeeOfficeByOfficeId(id) {
 
       return this.http.get<any[]>('https://eaton-partners.com/wp-json/wp/v2/joblocations/' + id, {
