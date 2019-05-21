@@ -1,4 +1,4 @@
-.footer__scroll-up {
+.footer__scroll-to-top {
     position: fixed;
     background: #05345f;
     right: 20px;
@@ -7,11 +7,19 @@
     width: 32px;
     cursor: pointer;
     z-index: 9999;
+    opacity: 0;
+    transition: all .2s ease-in-out;
 }
 
-.footer__scroll-up i {
+.footer__scroll-to-top i {
     font-size: 2rem;
     width: 100%;
     text-align: center;
     color: #fff;
+}
+
+
+.footer__scroll-to-top--show-scroll {
+    opacity: 1;
+    transition: all .2s ease-in-out;
 }

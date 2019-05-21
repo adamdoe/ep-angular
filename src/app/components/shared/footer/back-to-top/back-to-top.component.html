@@ -1,3 +1,3 @@
-<div class="footer__scroll-up" style="display: block;" (click)="scrollTop($event)">
+<div class="footer__scroll-up" style="display: block;" [ngClass]="{'footer__scroll-to-top--show-scroll': showScroll}" (click)="scrollToTop()" class="footer__scroll-to-top">
   <i class="fa fa-angle-up fa-2x"></i>    
 </div>
