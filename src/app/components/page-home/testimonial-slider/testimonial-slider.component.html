@@ -7,10 +7,6 @@
         <ngx-slick-carousel class="carousel" 
         #slickModal="slick-carousel" 
         [config]="slideConfig" 
-        (init)="slickInit($event)"
-        (breakpoint)="breakpoint($event)"
-        (afterChange)="afterChange($event)"
-        (beforeChange)="beforeChange($event)"
         class="text-center"
         >
       <div ngxSlickItem *ngFor="let testimonial of testimonials" class="slide">

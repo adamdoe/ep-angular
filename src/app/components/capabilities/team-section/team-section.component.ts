@@ -12,13 +12,27 @@ export class TeamSectionComponent implements OnInit {
   employees;
 
   slideConfig = {
-    "slidesToShow": 4, 
+    "slidesToShow": 4,
     "slidesToScroll": 1,
     "nextArrow":'<i class="fas fa-chevron-right"></i>',
     "prevArrow":'<i class="fas fa-chevron-left"></i>',
     "dots":false,
     "infinite": false,
-    "arrows":true
+    "arrows":true,
+    "responsive": [ 
+      {
+        breakpoint: 600,
+        settings: { slidesToShow: 1, slidesToScroll: 1 }
+      },
+      {
+        breakpoint: 767,
+        settings: { slidesToShow: 2, slidesToScroll: 1, }
+      }, 
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 4, slidesToScroll: 1, }
+      },
+]
   };
 
   constructor( private wordpressService: WordpressService) { }
@@ -33,6 +47,5 @@ export class TeamSectionComponent implements OnInit {
       console.log('Employee Data: ', this.data);
     });
   }
-
 
 }

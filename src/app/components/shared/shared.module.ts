@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { SectionTitleComponent } from './section-title/section-title.component';
 import { FilterComponent } from './filter/filter.component';
 import { ButtonsComponent } from './buttons/buttons.component';
-import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterAwardsComponent } from './footer/footer-awards/footer-awards.component';
@@ -17,6 +16,9 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component';
 import { PageTemplateComponent } from './page-template/page-template.component';
 import { TitleNoBackgroundComponent } from './title-no-background/title-no-background.component';
+import { KbwZoomDirective } from './kbw-zoom.directive';
+import { BackToTopComponent } from './footer/back-to-top/back-to-top.component';
+import { TrackScrollDirective } from './track-scroll.directive';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { TitleNoBackgroundComponent } from './title-no-background/title-no-backg
     FooterMenuComponent,
     PageTemplateComponent,
     TitleNoBackgroundComponent,
-    TitleNoBackgroundComponent
+    TitleNoBackgroundComponent,
+    KbwZoomDirective,
+    TrackScrollDirective
   ],
   imports: [
     CommonModule,
@@ -57,7 +61,8 @@ import { TitleNoBackgroundComponent } from './title-no-background/title-no-backg
     PreFooterComponent,
     PageTitleComponent,
     PageTemplateComponent,
-    TitleNoBackgroundComponent
+    TitleNoBackgroundComponent,
+    KbwZoomDirective
   ]
 })
 export class SharedModule { }

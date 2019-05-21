@@ -1,16 +1,20 @@
-<app-title-section *ngIf="data.title.rendered">{{data.title.rendered}}</app-title-section>
-<app-split-section
-    *ngIf="
-    data.custom_fields.column_title_left && 
-    data.custom_fields.column_title_right &&
-    data.custom_fields.column_content_right &&
-    data.custom_fields.column_content_left"
-    [columnTitleLeft]="data.custom_fields.column_title_left"
-    [columnTitleRight]="data.custom_fields.column_title_right"
-    [columnContentLeft]="data.custom_fields.column_content_left"
-    [columnContentRight]="data.custom_fields.column_content_right"
-></app-split-section>
+<section class="capabilities__top-section">
+    <app-title-section *ngIf="data.title.rendered">{{data.title.rendered}}</app-title-section>
+    <app-split-section
+        *ngIf="
+        data.custom_fields.column_title_left && 
+        data.custom_fields.column_title_right &&
+        data.custom_fields.column_content_right &&
+        data.custom_fields.column_content_left"
+        [columnTitleLeft]="data.custom_fields.column_title_left"
+        [columnTitleRight]="data.custom_fields.column_title_right"
+        [columnContentLeft]="data.custom_fields.column_content_left"
+        [columnContentRight]="data.custom_fields.column_content_right"
+    ></app-split-section>
+</section>
+    
+    <app-team-section
+        [data]="data"
+    ></app-team-section>
 
-<app-team-section
-    [data]="data"
-></app-team-section>
+<app-tombstone-section></app-tombstone-section>
